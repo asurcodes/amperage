@@ -8,6 +8,7 @@ This project aims to be an SEO optimized, minimal theme for blogging using GoHug
  - [ ] Documentation
  - [ ] Basic theme structure and files
  - [ ] Categories and taxonomies
+ - [ ] Breadcrumbs
  - [ ] Pagination of content
  - [ ] Table of contents
  - [ ] Related content (https://gohugo.io/content-management/related/)
