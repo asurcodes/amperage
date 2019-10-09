@@ -1,6 +1,6 @@
-# Amperage theme
+# Amperage ⚡
 
-⚡ Go Hugo theme for blogs implementing AMP and other SEO goodies ⚡
+Go Hugo theme for blogs implementing AMP and other SEO goodies
 
 This project aims to be an SEO optimized, minimal theme for blogging.
 
@@ -10,13 +10,18 @@ This project aims to be an SEO optimized, minimal theme for blogging.
  - [ ] Basic theme structure and files
  - [ ] Categories and taxonomies
  - [ ] Pagination of content
+ - [ ] Table of contents
+ - [ ] Related content (https://gohugo.io/content-management/related/)
+ - [ ] Og and Twitter cards implementation
+ - [ ] Facebook instant articles feed
  - [ ] AMP integration
  - [ ] AMP shorcodes
+ - [ ] Image thumbnails and optimization
  - [ ] Google Analytics integration
  - [ ] Google Adsense integration
  - [ ] Automatic RSS implementation
  - [ ] Automatic structured data implementation
  - [ ] Basic service worker implementation (https://github.com/ampproject/amp-sw)
- - [ ] Content search
- - [ ] Comments on posts
+ - [ ] Content search (https://www.npmjs.com/package/hugo-elasticsearch)
+ - [ ] Comments on posts (https://gohugo.io/content-management/comments/)
  - [ ] Styling
