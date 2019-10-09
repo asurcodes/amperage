@@ -22,4 +22,4 @@ This project aims to be an SEO optimized, minimal theme for blogging using GoHug
  - [ ] Basic service worker implementation (https://github.com/ampproject/amp-sw)
  - [ ] Content search (https://www.npmjs.com/package/hugo-elasticsearch)
  - [ ] Comments on posts (https://gohugo.io/content-management/comments/)
- - [ ] Styling
+ - [ ] Styling (Full CSS responsiveness)
