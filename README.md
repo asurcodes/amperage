@@ -1,6 +1,6 @@
-# ⚡ Amperage ⚡
+# ⚡ Amperage theme ⚡
 
-This project aims to be an SEO optimized, minimal theme for blogging.
+This project aims to be an SEO optimized, minimal theme for blogging using GoHugo.
 
 ## Features
 
