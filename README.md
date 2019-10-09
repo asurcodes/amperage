@@ -1,6 +1,6 @@
 # ⚡ Amperage theme ⚡
 
-This project aims to be an SEO optimized, minimal theme for blogging using GoHugo.
+This project aims to be an SEO optimized, minimal theme for blogging using GoHugo. 
 
 ## Features
 
@@ -24,3 +24,7 @@ This project aims to be an SEO optimized, minimal theme for blogging using GoHug
  - [ ] Content search (https://www.npmjs.com/package/hugo-elasticsearch)
  - [ ] Comments on posts (https://gohugo.io/content-management/comments/)
  - [ ] Styling (Full CSS responsiveness)
+
+## Instalation
+
+TODO
