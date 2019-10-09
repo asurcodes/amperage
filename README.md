@@ -5,6 +5,7 @@ This project aims to be an SEO optimized, minimal theme for blogging using GoHug
 ## Features
 
  - [ ] Easy workflow for devs
+ - [ ] Documentation
  - [ ] Basic theme structure and files
  - [ ] Categories and taxonomies
  - [ ] Pagination of content
