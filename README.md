@@ -1,4 +1,4 @@
-# Amperage ⚡
+# ⚡ Amperage ⚡
 
 Go Hugo theme for blogs implementing AMP and other SEO goodies
 
