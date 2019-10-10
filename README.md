@@ -12,6 +12,7 @@ This project aims to be an SEO optimized, minimal theme for blogging using GoHug
  - [ ] Breadcrumbs
  - [ ] Pagination of content
  - [ ] Table of contents
+ - [ ] Emoji support
  - [ ] Related content (https://gohugo.io/content-management/related/)
  - [ ] Og and Twitter cards implementation
  - [ ] Facebook instant articles feed
