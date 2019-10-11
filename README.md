@@ -24,6 +24,7 @@ This project aims to be an SEO optimized, minimal theme for blogging using GoHug
  - [ ] Automatic RSS implementation
  - [ ] Automatic structured data implementation
  - [ ] Basic service worker implementation (https://github.com/ampproject/amp-sw)
+ - [ ] Create 404 and Offline pages
  - [ ] Content search (https://www.npmjs.com/package/hugo-elasticsearch)
  - [ ] Comments on posts (https://gohugo.io/content-management/comments/)
  - [ ] Styling (Full CSS responsiveness)
