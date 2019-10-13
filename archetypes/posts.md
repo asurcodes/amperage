@@ -1,8 +1,9 @@
 +++
-date = ""
-publishdate = ""
+draft: true
+date = "{{ .Date }}"
+publishdate = "{{ .Date }}"
 
-title = ""
+title = "{{ replace .Name "-" " " | title }}"
 
 tags = []
 categories = []
