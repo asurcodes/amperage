@@ -1,26 +1,10 @@
-<!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <main>
-        {{- block "main" . }}{{- end }}
-        </main>
-        <aside>
-            <!-- Table of contents -->
-            {{ .TableOfContents }}
-            <!-- Related content -->
-            {{ $related := .Site.RegularPages.Related . | first 5 }}
-            {{ with $related }}
-            <h3>See Also</h3>
-            <ul>
-                {{ range . }}
-                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-                {{ end }}
-            </ul>
-            {{ end }}
-
-        </aside>
-        {{- partial "footer.html" . -}}
-    </body>
-</html>
+{{ define "main" }}
+<article>
+    <header>
+        <h1>{{.Title}}</h1>
+    </header>
+    <div class="content">
+        {{ .Content }}
+    </div>
+</article>
+{{ end }}
