@@ -98,7 +98,14 @@ main {
 }
 
 aside {
+	height: auto;
 	grid-column: span 2;
+	margin-top: 2.5em;
+	.aside--wrapper {
+		position: sticky;
+		position: -webkit-sticky;
+		top: 1em; /* required */
+	}
 }
 
 @media (max-width: 1200px) {
@@ -137,6 +144,10 @@ a {
 	}
 }
 
+li {
+	margin-top: 0.25em;
+}
+
 blockquote {
 	margin: 0 auto;
 	margin-left: 1em;
@@ -156,6 +167,7 @@ blockquote {
 }
 
 pre, code {
+	font-size: 12pt;
 	background-color: #DCDCDC;
 }
 code {
@@ -167,6 +179,6 @@ pre {
 }
 
 /* Natural flow and rhythm in articles by default */
-article .content > * {
+article > * {
 	margin-top: 1em;
 }

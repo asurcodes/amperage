@@ -1,14 +1,26 @@
 {{ define "main" }}
 <article>
-    <header>
-        <h1>{{.Title}}</h1>
-    </header>
-    <div class="content">
-        {{ .Content }}
-    </div>
+    {{ .Content }}
 </article>
 {{ end }}
 
 {{ define "aside" }}
-	<div></div>
+    <div class="aside--wrapper">
+        <!-- Table of contents -->
+        <h3>Tabla de contenidos</h3>
+        {{ .TableOfContents }}
+        <!-- Related content -->
+        {{ $related := .Site.RegularPages.Related . | first 3 }}
+        {{ with $related }}
+        <h3>Posts relacionados</h3>
+        <ul>
+            {{ range . }}
+            <li>
+                <div><a href="{{.Permalink }}" class="title is-size-5">{{ .Title }}</a></div>
+               <div class="subtitle is-6">{{ .Date.Format "January 02, 2006" }}</div>
+            </li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </div>
 {{ end }}
