@@ -6,7 +6,8 @@ publishdate = "{{ .Date }}"
 title = "{{ replace .Name "-" " " | title }}"
 
 tags = []
-categories = []
+
+keywords = []
 
 [amp]
     elements = []
