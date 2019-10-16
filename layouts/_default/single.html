@@ -7,17 +7,16 @@
 {{ define "aside" }}
     <div class="aside__wrapper">
         <!-- Table of contents -->
-        <h3>Tabla de contenidos</h3>
+        <h2>Tabla de contenidos</h2>
         {{ .TableOfContents }}
         <!-- Related content -->
         {{ $related := .Site.RegularPages.Related . | first 3 }}
         {{ with $related }}
-        <h3>Posts relacionados</h3>
+        <h2>Posts relacionados</h2>
         <ul>
             {{ range . }}
             <li>
-                <div><a href="{{.Permalink }}" class="title is-size-5">{{ .Title }}</a></div>
-               <div class="subtitle is-6">{{ .Date.Format "January 02, 2006" }}</div>
+                <div><a href="{{.Permalink }}">{{ .Title }}</a></div>
             </li>
             {{ end }}
         </ul>
