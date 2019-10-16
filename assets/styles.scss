@@ -80,27 +80,25 @@ body {
 	color:#333;
 }
 
-body > header,footer {
+header,
+footer {
 	grid-column: 1 / span 5;
 	display: flex;
 	justify-content: flex-end;
-	overflow: auto;
 	max-height: 3em;
-
 	a {
 		padding:0.5em 1em;
 	}
 }
 
 main {
-	margin-left: 2em;
+	margin: 2.5em 0 0 2em;
 	grid-column: 1 / span 3;
 }
 
 aside {
-	height: auto;
+	margin-top: 3em;
 	grid-column: span 2;
-	margin-top: 2.5em;
 	.aside--wrapper {
 		position: sticky;
 		position: -webkit-sticky;
@@ -113,6 +111,11 @@ aside {
 	aside {
 		margin: 0 1em;
 		grid-column: 1 / span 5;
+	}
+	header,
+	footer {
+		overflow: auto;
+		justify-content: flex-start;
 	}
 }
 
@@ -161,7 +164,7 @@ blockquote {
 	}
 	p {
 		color: #555;
-		font-size: 1.2em;
+		font-size: 16pt;
 		font-family: 'Times New Roman', serif;
 	}
 }
@@ -181,4 +184,7 @@ pre {
 /* Natural flow and rhythm in articles by default */
 article > * {
 	margin-top: 1em;
+}
+article h1 {
+	margin-top: 0;
 }
