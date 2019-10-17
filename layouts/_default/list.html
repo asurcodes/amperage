@@ -3,7 +3,7 @@
 	<!-- Ranges through content/posts/*.md -->
 	{{ range .Pages }}
 	    <li>
-	        <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+	        <a href="{{.Permalink}}">{{.Date.Format "02-01-2006"}} | {{.Title}}</a>
 	    </li>
 	{{ end }}
 	</ul>
