@@ -9,6 +9,9 @@ tags = []
 
 keywords = []
 
+[taxonomies]
+    tag = "tags"
+
 [amp]
     elements = []
 

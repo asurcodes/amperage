@@ -1,13 +1,32 @@
 +++
-date = ""
-publishdate = ""
+draft: true
+date = "{{ .Date }}"
+publishdate = "{{ .Date }}"
 
-title = ""
+title = "{{ replace .Name "-" " " | title }}"
+
+tags = []
+
+keywords = []
+
+[taxonomies]
+    tag = "tags"
 
 [amp]
     elements = []
 
-[ogp]
+[article]
+    lead = ""
+    category = ""
+    related = []
+
+[author]
+    name = ""
+    image = ""
+    bio = ""
+    homepage = ""
+
+[image]
     src = ""
     title = ""
     author = ""
@@ -15,13 +34,19 @@ title = ""
     license = ""
     licenseLink = ""
 
-[twitter]
-    src = ""
+[ogp]
     title = ""
-    author = ""
-    link = ""
-    license = ""
-    licenseLink = ""
+    url = ""
+    description = ""
+    image = ""
+    site = ""
+
+[twitter]
+    title = ""
+    url = ""
+    description = ""
+    image = ""
+    site = ""
 
 [sitemap]
   changefreq = "monthly"
