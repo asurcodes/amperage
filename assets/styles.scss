@@ -1,8 +1,8 @@
-/* Variables */
+/* Imports*/
 
-$main-color: #ef8b80;
-$secondary-color: #fff;
-
+@import "variables";
+@import "reset";
+@import "syntax";
 /* CSS Reset */
 
 /* Box sizing rules */
