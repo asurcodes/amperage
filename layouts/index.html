@@ -1,3 +1,9 @@
 {{ define "main" }}
-    {{ partial "post-list.html" (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+    <ul>
+      {{ range (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+        <li>
+            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+        </li>
+      {{ end }}
+    </ul>
 {{ end }}
