@@ -94,7 +94,7 @@ blockquote {
 pre, code {
 	font-family: monospace;
 	font-size: 12pt;
-	background-color: #F8F8F8;
+	background-color: #F1F1F1;
 }
 /* Inline code fence*/
 article > pre {
@@ -109,7 +109,7 @@ article > p > code {
 article > .highlight {
 	overflow: auto;
 	.chroma {
-		background-color: #F8F8F8;
+		background-color: #F1F1F1;
 	}
 }
 
