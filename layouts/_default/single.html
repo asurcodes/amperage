@@ -1,16 +1,19 @@
 {{ define "main" }}
 
-{{ $taxo := "tags" }} <!-- Use the plural form here -->
-
-<ul id="{{ $taxo }}">
-    <li>Tags:</li>
-    {{ range .Param $taxo }}
-        {{ $name := . }}
-        {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
-            <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
+<div>
+    By {{.Params.Author.Name}} |
+    <time datetime="{{.PublishDate}}">{{.PublishDate.Format "02-01-2006" }}</time>
+    {{ $taxonomy := "tags" }} <!-- Use the plural form here -->
+    <ul id="{{ $taxonomy }}">
+        <li>Tags:</li>
+        {{ range .Param $taxonomy }}
+            {{ $name := . }}
+            {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy ($name | urlize)) }}
+                <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
+            {{ end }}
         {{ end }}
-    {{ end }}
-</ul>
+    </ul>
+</div>
 
 <article>
     {{ .Content }}
