@@ -2,25 +2,27 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
 <title>{{ .Title }}</title>
-<meta name="description" content="{{ .Summary }}" />
+<meta name="description" content="{{ .Description }}" />
 <link rel="canonical" href="{{ .Permalink }}" >
 
 <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
-<link rel="preconnect dns-prefetch" href="https://analytics.google.com/" crossorigin>
+<link rel="preconnect dns-prefetch" href="https://cdn.ampproject.org" crossorigin>
+<link rel="preconnect dns-prefetch" href="https://www.googletagmanager.com" crossorigin>
+<link rel="preconnect dns-prefetch" href="https://cdn.ampproject.org" crossorigin>
 
-<meta property="og:title" content="">
-<meta property="og:url" content="">
-<meta property="og:description" content="">
-<meta property="og:image" content="">
+<meta property="og:title" content="{{ .Params.Ogp.Title | default .Title }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:description" content="{{ .Params.Ogp.Description | default .Description }}">
+<meta property="og:image" content="{{ .Params.Twitter.Image | default .Params.Image.Src | default "logo.png"}}">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="">
+<meta property="og:site_name" content="{{ .Params.Ogp.Site }}">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="">
-<meta name="twitter:url" content="">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="">
-<meta name="twitter:site" content="">
+<meta name="twitter:title" content="{{ .Params.Twitter.Title | default .Title }}">
+<meta name="twitter:url" content="{{ .Permalink }}">
+<meta name="twitter:description" content="{{ .Params.Twitter.Description | default .Description }}">
+<meta name="twitter:image" content="{{ .Params.Twitter.Image | default .Params.Image.Src | default "logo.png"}}">
+<meta name="twitter:site" content="{{ .Params.Twitter.Site }}">
 
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes  -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
 <noscript>
