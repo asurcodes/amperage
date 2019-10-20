@@ -1,9 +1,13 @@
 +++
 draft: true
 date = "{{ .Date }}"
-publishdate = "{{ .Date }}"
+publishdate = ""
 
 title = "{{ replace .Name "-" " " | title }}"
+
+description = ""
+
+summary = ""
 
 tags = []
 
@@ -11,11 +15,6 @@ keywords = []
 
 [amp]
     elements = []
-
-[article]
-    lead = ""
-    category = ""
-    related = []
 
 [author]
     name = ""
