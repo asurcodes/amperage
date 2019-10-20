@@ -1,4 +1,17 @@
 {{ define "main" }}
+
+{{ $taxo := "tags" }} <!-- Use the plural form here -->
+
+<ul id="{{ $taxo }}">
+    <li>Tags:</li>
+    {{ range .Param $taxo }}
+        {{ $name := . }}
+        {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
+            <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
+        {{ end }}
+    {{ end }}
+</ul>
+
 <article>
     {{ .Content }}
 </article>

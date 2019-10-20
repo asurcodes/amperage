@@ -1,12 +1,16 @@
 {{ define "main" }}
   <div>
-   <h1>{{ .Title }}</h1>
-    {{ range .Pages }}
-        {{ .Render "summary"}}
-    {{ end }}
+    <h1>{{ .Title }}</h1>
+    <ul>
+        {{ range .Pages }}
+            <li>
+                <a href="{{ .Permalink }}">{{.Date.Format "02-01-2006"}} | {{ .Title }}</a>
+            </li>
+        {{ end }}
+    </ul>
   </div>
 {{ end }}
 
 {{ define "aside" }}
-	<div></div>
+    <div></div>
 {{ end }}

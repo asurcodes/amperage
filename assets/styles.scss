@@ -32,7 +32,7 @@ main {
 }
 
 aside {
-	margin-top: 3em;
+	margin-top: 2.5em;
 	grid-column: span 2;
 	.aside__wrapper {
 		position: sticky;
@@ -71,6 +71,14 @@ a {
 
 li {
 	margin-top: 0.25em;
+}
+
+#tags {
+	margin: 0;
+	padding: 0;
+	li {
+	  display: inline;
+	}
 }
 
 blockquote {
