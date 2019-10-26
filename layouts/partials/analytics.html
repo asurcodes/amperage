@@ -1,11 +1,12 @@
+{{ if isset $.Site.Params "googleanalytics" }}
 <!-- Configure analytics to use gtag -->
 <amp-analytics type="gtag" data-credentials="include">
   <script type="application/json">
     {
       "vars": {
-        "gtag_id": "UA-128498798-1",
+        "gtag_id": "{{ $.Site.Params.googleAnalytics }}",
         "config": {
-          "UA-128498798-1": { "groups": "default" }
+          "{{ $.Site.Params.googleAnalytics }}": { "groups": "default" }
         }
       },
       "triggers": {
@@ -17,3 +18,4 @@
     }
   </script>
 </amp-analytics>
+{{ end }}
