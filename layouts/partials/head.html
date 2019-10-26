@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
 <title>{{ .Title }}</title>
-<meta name="description" content="{{ .Description }}" />
+<meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
 <link rel="canonical" href="{{ .Permalink }}" >
 
 <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
