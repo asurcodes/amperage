@@ -1,0 +1,28 @@
+<section class="under-title">
+    <div class="under-title__left">
+        By {{.Page.Params.Author.Name}} |
+        <time datetime="{{ .Page.PublishDate }}">{{.Page.PublishDate.Format "02-01-2006" }}</time>
+        {{ $taxonomy := "tags" }} <!-- Use the plural form here -->
+        <ul id="{{ $taxonomy }}">
+            <li>Tags:</li>
+            {{ range .Page.Param $taxonomy }}
+                {{ $name := . }}
+                {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy ($name | urlize)) }}
+                    <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
+                {{ end }}
+            {{ end }}
+        </ul>
+    </div>
+    <div class="under-title__right social-share">
+        <amp-social-share class="social-share__button"
+            aria-label="Compartir contenido" type="system" width="50" height="50"></amp-social-share>
+        <amp-social-share class="social-share__button"
+            aria-label="Compartir en Facebook" type="facebook" width="50" height="50"></amp-social-share>
+        <amp-social-share class="social-share__button"
+            aria-label="Compartir en Twitter" type="twitter" width="50" height="50"></amp-social-share>
+        <amp-social-share class="social-share__button"
+            aria-label="Compartir en Linkedin" type="linkedin" width="50" height="50"></amp-social-share>
+        <amp-social-share class="social-share__button"
+            aria-label="Compartir en pinterest" type="pinterest" width="50" height="50"></amp-social-share>
+    </div>
+</section>
