@@ -8,37 +8,34 @@
 
 body {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(12, 1fr);
 	grid-gap: 1em 1em;
 	font-size: 14pt;
 	font-family: Courier New;
 	color:#333;
 }
 
-header,
-footer {
-	grid-column: 1 / span 5;
-	display: flex;
-	justify-content: flex-end;
-	max-height: 3em;
-	a {
-		padding:0.5em 1em;
+header {
+	grid-column: 3 / span 8;
+	.header__logo {
+		width: 100%;
+		margin: 1em 0 0 0;
+		svg {
+			width: 100%;
+			height: auto;
+		}
+		a {
+			border-bottom: none;
+			box-shadow: none;
+			&:hover {
+				background: initial;
+			}
+		}
 	}
 }
 
 main {
-	margin: 2.5em 0 0 2em;
-	grid-column: 1 / span 3;
-}
-
-aside {
-	margin-top: 2.5em;
-	grid-column: span 2;
-	.aside__wrapper {
-		position: sticky;
-		position: -webkit-sticky;
-		top: 1em; /* required */
-	}
+	grid-column: 3 / span 8;
 }
 
 h1, h2, h3, h4 {
@@ -59,11 +56,11 @@ h4 {
 }
 
 a {
+	color: inherit;
 	text-decoration:none;
 	border-bottom: 2px solid $main-color;
 	box-shadow: inset 0 -4px 0 $main-color;
-	color: inherit;
-	transition: background 0.1s cubic-bezier(.33,.66,.66,1);
+	transition: background 0.2s;
 	&:hover {
 		background: $main-color;
 	}
@@ -73,12 +70,10 @@ li {
 	margin-top: 0.25em;
 }
 
-#tags {
-	margin: 0;
-	padding: 0;
-	li {
-		display: inline;
-	}
+pre, code {
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 12pt;
+	background-color: #F1F1F1;
 }
 
 blockquote {
@@ -99,11 +94,33 @@ blockquote {
 	}
 }
 
-pre, code {
-	font-family: "Lucida Console", Monaco, monospace;
-	font-size: 12pt;
-	background-color: #F1F1F1;
+.under-title {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 0;
+	.under-title__left,
+	.under-title__right {
+		align-self: center;
+		margin-top: 1em;
+	}
 }
+
+#tags {
+	margin: 0;
+	padding: 0;
+	li {
+		display: inline;
+	}
+}
+
+.social-share {
+	amp-social-share {
+		border-radius: 50%;
+		background-size: 60%;
+	}
+}
+
 /* Inline code fence*/
 article > pre {
 	overflow: auto;
@@ -126,17 +143,24 @@ article > .highlight {
 }
 
 @media (max-width: 1200px) {
-	main,
-	aside {
-		margin: 0 1em;
-		grid-column: 1 / span 5;
+	body {
+		grid-gap: 0;
 	}
-	header,
-	footer {
-		overflow: auto;
-		justify-content: flex-start;
+	main,
+	header {
+		grid-column: 1 / span 12;
+		margin: .5em 0.75em 0 .5em;
 	}
 	h1 {
-		font-size: 2.5rem;
+		font-size: 2.25rem;
+	}
+	h2 {
+		font-size: 1.75rem;
+	}
+	h3 {
+		font-size: 1.5rem;
+	}
+	h4 {
+		font-size: 1.25rem;
 	}
 }
