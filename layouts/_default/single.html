@@ -18,24 +18,5 @@
 <article>
     {{ .Content }}
 </article>
-{{ end }}
 
-{{ define "aside" }}
-    <div class="aside__wrapper">
-        <!-- Table of contents -->
-        <h2>Tabla de contenidos</h2>
-        {{ .TableOfContents }}
-        <!-- Related content -->
-        {{ $related := .Site.RegularPages.Related . | first 3 }}
-        {{ with $related }}
-        <h2>Posts relacionados</h2>
-        <ul>
-            {{ range . }}
-            <li>
-                <div><a href="{{.Permalink }}">{{ .Title }}</a></div>
-            </li>
-            {{ end }}
-        </ul>
-        {{ end }}
-    </div>
 {{ end }}
