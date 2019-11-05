@@ -13,7 +13,7 @@
 <meta property="og:title" content="{{ .Params.Ogp.Title | default .Title }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:description" content="{{ .Params.Ogp.Description | default .Description }}">
-<meta property="og:image" content="{{ .Params.Twitter.Image | default .Params.Image.Src | default "/logo.png"}}">
+<meta property="og:image" content="{{ .Params.Ogp.Image | default .Params.Image.Src | default "/logo.png"}}">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="{{ .Params.Ogp.Site }}">
 
