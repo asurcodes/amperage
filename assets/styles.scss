@@ -142,6 +142,27 @@ article > .highlight {
 	max-width: 1000px;
 }
 
+table {
+	overflow: auto;
+	border-collapse: collapse;
+	width: 100%;
+	td, th {
+		border: 1px solid #ddd;
+		padding: 8px;
+	}
+	tr:nth-child(even) {
+		background-color: #F1F1F1;
+	}
+	tr:hover {
+		background-color: #ddd;
+	}
+	th {
+		padding: 1em 0.5em;
+		background-color: $main-color;
+		color: white;
+	}
+}
+
 @media (max-width: 1200px) {
 	body {
 		grid-gap: 0;
