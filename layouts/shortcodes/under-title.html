@@ -6,11 +6,11 @@
         </time>
         {{ $taxonomy := "tags" }}
         <ul id="{{ $taxonomy }}">
-            <li>Tags:</li>
+            <li>Tags: </li>
             {{ range .Page.Param $taxonomy }}
                 {{ $name := . }}
                 {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy ($name | urlize)) }}
-                    <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
+                    <li><a href="{{ .Permalink }}">{{ $name }}</a></li> 
                 {{ end }}
             {{ end }}
         </ul>
