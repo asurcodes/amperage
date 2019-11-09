@@ -99,8 +99,8 @@ blockquote {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	margin-top: 0;
-	.under-title__left,
-	.under-title__right {
+	&__left,
+	&__right {
 		align-self: center;
 		margin-top: 1em;
 	}
