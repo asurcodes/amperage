@@ -1,11 +1,12 @@
 {{ define "main" }}
-	{{.Content}}
-	<ul>
-	<!-- Ranges through content/posts/*.md -->
+
+	<p>{{.Content}}</p>
+
 	{{ range .Pages }}
-	    <li>
-	        <a href="{{.Permalink}}">{{.PublishDate.Format "02-01-2006"}} | {{.Title}}</a>
-	    </li>
+	<article>
+		<h2>{{.Title}}</h2>
+		<p>{{.Summary}} <a href="{{.Permalink}}" aria-label="Leer {{.Title}}"> Leer más </a></p>
+	</article>
 	{{ end }}
-	</ul>
+
 {{ end }}
