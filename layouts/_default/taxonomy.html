@@ -1,12 +1,12 @@
 {{ define "main" }}
-  <div>
-    <h1>{{ .Title }}</h1>
-    <ul>
-        {{ range .Pages }}
-            <li>
-                <a href="{{ .Permalink }}">{{.PublishDate.Format "02-01-2006"}} | {{ .Title }}</a>
-            </li>
-        {{ end }}
-    </ul>
-  </div>
+
+    {{.Content}}
+
+    {{ range .Pages }}
+    <article>
+        <h2>{{.Title}}</h2>
+        <p>{{.Summary}} <a href="{{.Permalink}}" aria-label="Leer {{.Title}}"> Leer más </a></p>
+    </article>
+    {{ end }}
+
 {{ end }}
