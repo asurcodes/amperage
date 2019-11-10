@@ -1,5 +1,5 @@
 {{ define "main" }}
-	{{ range (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+	{{ range site.RegularPages }}
 	<article>
 		<h2>{{.Title}}</h2>
 		<p>{{.Summary}} <a href="{{.Permalink}}" aria-label="Leer {{.Title}}"> Leer más </a></p>
