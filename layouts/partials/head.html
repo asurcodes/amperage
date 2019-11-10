@@ -3,6 +3,7 @@
 
 <title>{{ .Title }}</title>
 <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+<meta name="theme-color" content="{{ $.Site.Params.ThemeColor }}"/>
 <link rel="canonical" href="{{ .Permalink }}" >
 
 <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
