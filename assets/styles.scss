@@ -144,23 +144,25 @@ article > .highlight {
 }
 
 table {
-	overflow: auto;
+	display: block;
+	overflow-x: auto;
 	border-collapse: collapse;
-	width: 100%;
 	td, th {
 		border: 1px solid #ddd;
-		padding: 8px;
+	}
+	td {
+		padding: .5em 1em;
+	}
+	th {
+		padding: 1em 2em;
+		background-color: $main-color;
+		color: white;
 	}
 	tr:nth-child(even) {
 		background-color: #F1F1F1;
 	}
 	tr:hover {
 		background-color: #ddd;
-	}
-	th {
-		padding: 1em 0.5em;
-		background-color: $main-color;
-		color: white;
 	}
 }
 
