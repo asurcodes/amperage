@@ -3,8 +3,8 @@
 	{
 		"@context":"http://schema.org",
 		"@type": "BlogPosting",
-		"image": "http://example.com/images/image.jpg",
-		"url": "http://example.com/blog/post",
+		"image": "{{ .Page.Params.Image.Src }}",
+		"url": "{{ .Permalink }}",
 		"headline": "{{ .Page.Title }}",
 		"alternativeHeadline": "{{ .Page.Title }}",
 		"dateCreated": "{{ .Page.Date.Format "2006-01-02T15:04:05" }}",
