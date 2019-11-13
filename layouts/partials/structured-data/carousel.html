@@ -1,0 +1,37 @@
+{{ if .IsHome }}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {{ range $index, $page := site.RegularPages }}
+          {{ if ne $index 0 }},{{ end }} 
+          {
+            "@type": "ListItem",
+            "position": "{{ add $index 1 }}",
+            "url": "{{ $page.Permalink }}",
+            "name": "{{ $page.Title }}"
+          }
+        {{ end }}
+      ]
+    }
+  </script>
+{{ else if .IsNode }}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {{ range $index, $page := .Pages }}
+          {{ if ne $index 0 }},{{ end }}
+          {
+            "@type": "ListItem",
+            "position": "{{ add $index 1 }}",
+            "url": "{{ $page.Permalink }}",
+            "name": "{{ $page.Title }}"
+          }
+        {{ end }}
+      ]
+    }
+  </script>
+{{ end }}
