@@ -2,8 +2,9 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
 <title>{{ .Title }}</title>
-<meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
-<meta name="theme-color" content="{{ $.Site.Params.ThemeColor }}"/>
+<meta name="description" content="{{if .IsHome}}{{ .Site.Params.Description }}{{else}}{{.Description}}{{end}}" />
+<meta name="theme-color" content="{{ .Site.Params.ThemeColor }}"/>
+<link rel="sitemap" href="{{ "sitemap.xml" | absURL }}" type="application/xml" />
 <link rel="canonical" href="{{ .Permalink }}" >
 
 <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
@@ -13,17 +14,17 @@
 
 <meta property="og:title" content="{{ .Params.Ogp.Title | default .Title }}">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:description" content="{{ .Params.Ogp.Description | default .Description }}">
-<meta property="og:image" content="{{ .Params.Ogp.Image | default .Params.Image.Src | default "/logo.png"}}">
+<meta property="og:description" content="{{if .IsHome}}{{ .Site.Params.Description }}{{else}}{{.Params.Ogp.Description | default .Description}}{{end}}">
+<meta property="og:image" content="{{ .Params.Ogp.Image | default .Params.Image.Src | default "/logo.png" | absURL}}">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="{{ .Params.Ogp.Site }}">
+<meta property="og:site_name" content="{{ .Params.Ogp.Site | default .Page.Params.FacebookSite }}">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ .Params.Twitter.Title | default .Title }}">
 <meta name="twitter:url" content="{{ .Permalink }}">
-<meta name="twitter:description" content="{{ .Params.Twitter.Description | default .Description }}">
-<meta name="twitter:image" content="{{ .Params.Twitter.Image | default .Params.Image.Src | default "/logo.png"}}">
-<meta name="twitter:site" content="{{ .Params.Twitter.Site }}">
+<meta name="twitter:description" content="{{if .IsHome}}{{ .Site.Params.Description }}{{else}}{{.Params.Twitter.Description | default .Description}}{{end}}">
+<meta name="twitter:image" content="{{ .Params.Twitter.Image | default .Params.Image.Src | default "/logo.png" | absURL}}">
+<meta name="twitter:site" content="{{ .Params.Twitter.Site | default .Site.Params.TwitterSite }}">
 
 <link rel="manifest" href="{{ "/manifest.json" | absURL }}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ "/icons/apple-touch-icon.png" | absURL }}">
