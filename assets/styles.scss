@@ -16,7 +16,6 @@ body {
 }
 
 header {
-	grid-column: 3 / span 8;
 	.header__logo {
 		width: 100%;
 		margin: 1em 0 0 0;
@@ -34,8 +33,8 @@ header {
 	}
 }
 
-main, footer {
-	grid-column: 3 / span 8;
+header, main, footer {
+	grid-column: 3 / span 7;
 }
 
 h1, h2, h3, h4 {
