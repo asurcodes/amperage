@@ -1,12 +1,18 @@
 name = "Amperage"
+
 license = "MIT"
 licenselink = "https://github.com/asurbernardo/amperage/blob/master/LICENSE"
+
 description = "⚡ A GoHugo blog theme with AMP and other SEO goodies ⚡"
+
 homepage = "https://github.com/asurbernardo/amperage"
-tags = ["amp", "seo", "blog"]
-features = ["amp", "seo", "toc", "related content", "structured data", "shortcodes"]
+
+tags = ["amp", "seo", 'structured-data', 'service-worker', 'service-worker', "blog"]
+
+features = ["amp", "seo", "toc", "related content", "structured data", 'service-worker', "shortcodes"]
+
 min_version = "0.41"
 
 [author]
-  name = "Asur Bernardo"
-  homepage = "https://asurbernardo.com"
+    name = "Asur Bernardo"
+    homepage = "https://asur.dev"
