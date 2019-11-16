@@ -13,12 +13,12 @@
 <link rel="preconnect dns-prefetch" href="https://www.googletagmanager.com" crossorigin>
 <link rel="preconnect dns-prefetch" href="https://cdn.ampproject.org" crossorigin>
 
-<meta name="og:title" content="{{ .Params.Ogp.Title | default .Title }}">
-<meta name="og:url" content="{{ .Permalink }}">
-<meta name="og:description" content="{{if .IsHome}}{{ .Site.Params.Description }}{{else}}{{.Params.Ogp.Description | default .Description}}{{end}}">
-<meta name="og:image" content="{{ .Params.Ogp.Image | default .Params.Image.Src | default "/logo.png" | absURL}}">
-<meta name="og:type" content="article">
-<meta name="og:site_name" content="{{ .Params.Ogp.Site | default .Page.Params.FacebookSite }}">
+<meta property="og:title" content="{{ .Params.Ogp.Title | default .Title }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:description" content="{{if .IsHome}}{{ .Site.Params.Description }}{{else}}{{.Params.Ogp.Description | default .Description}}{{end}}">
+<meta property="og:image" content="{{ .Params.Ogp.Image | default .Params.Image.Src | default "/logo.png" | absURL}}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="{{ .Params.Ogp.Site | default .Page.Params.FacebookSite }}">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ .Params.Twitter.Title | default .Title }}">
