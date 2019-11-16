@@ -5,8 +5,8 @@
     {{ .Content }}
     <!-- Related content -->
     {{- partial "post/related-content.html" . -}}
+    <!-- Comments -->
+    {{ partial "post/comments.html" }}
 </article>
-
-{{ partial "post/comments.html" }}
 
 {{ end }}
