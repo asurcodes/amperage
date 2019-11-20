@@ -1,5 +1,5 @@
 {{- $ampCorePath := index (index $.Site.Data "amp-modules") "amp-core" -}}
-<script async src="{{ $ampCorePath }}"></script>
+<script async src="{{ $ampCorePath }}" rel="preload"></script>
 
 {{- range $.Site.Params.ampElements -}}
     {{- if (index (index $.Site.Data "amp-modules") .) -}}
