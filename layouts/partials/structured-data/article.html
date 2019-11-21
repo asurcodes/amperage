@@ -3,7 +3,7 @@
 	{
 		"@context":"http://schema.org",
 		"@type": "BlogPosting",
-		"image": "{{ .Page.Params.Image.Src }}",
+		"image": "{{ .Page.Params.Image.Src | absURL }}",
 		"url": "{{ .Permalink }}",
 		"headline": "{{ .Page.Title }}",
 		"alternativeHeadline": "{{ .Page.Title }}",
@@ -22,12 +22,12 @@
 		"author": {
 			"@type": "Person",
 			"name": "{{ .Page.Params.Author.Name }}",
-			"url": "{{ .Page.Params.Author.Homepage }}"
+			"url": "{{ .Page.Params.Author.Homepage | absURL }}"
 		},
 		"creator": {
 			"@type": "Person",
 			"name": "{{ .Page.Params.Author.Name }}",
-			"url": "{{ .Page.Params.Author.Homepage }}"
+			"url": "{{ .Page.Params.Author.Homepage | absURL }}"
 		},
 		"publisher": {
 			"@type": "Organization",
