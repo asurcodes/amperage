@@ -4,8 +4,8 @@
 
     {{ range .Pages }}
     <article>
-        <h2>{{.Title}}</h2>
-        <p>{{.Summary}} <a href="{{.Permalink}}" aria-label="Leer {{.Title}}"> Leer más </a></p>
+        <h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
+        <p>{{.Summary}}</p>
     </article>
     {{ end }}
 
