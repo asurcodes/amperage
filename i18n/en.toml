@@ -1,0 +1,24 @@
+[home]
+other = "Home"
+[notFound]
+other = "Page not found"
+[search]
+other = "Search"
+[goBackHome]
+other = "Go back to the homepage"
+[by]
+other = "By"
+[tags]
+other = "Tags"
+[share]
+other = "Share content"
+[shareFacebook]
+other = "Share on Facebook"
+[shareTwitter]
+other = "Share on Twitter"
+[shareLinkedin]
+other = "Share on Linkedin"
+[sharePinterest]
+other = "Share on Pinterest"
+[related]
+other = "Related readings 📖"
