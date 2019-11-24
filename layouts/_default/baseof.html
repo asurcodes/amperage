@@ -11,6 +11,7 @@
             {{- partial "header.html" . -}}
         </header>
         <main>
+            {{.Content}}
             {{- block "main" . }}{{- end }}
         </main>
         <footer>
