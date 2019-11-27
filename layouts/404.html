@@ -1,3 +1,49 @@
-{{ define "main" }}
-    <h1>{{ i18n "notFound" }}</h1>
-{{ end }}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <title>{{ i18n "notFound"}}</title>
+        <style type="text/css">
+            html, body {
+                height: 100%;
+            }
+            body {
+                font-family: Courier New;
+                margin: 0;
+            }
+            h1 {
+                font-weight: bold;
+                font-size: 5em;
+            }
+            .flex-container {
+                height: 100%;
+                padding: 0;
+                margin: 0;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+            .flex-item {
+                text-align: center;
+            }
+            @media only screen and (max-width: 768px) {
+                h1 {
+                    font-size: 3.5em;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main class="flex-container">
+            <h1 class="flex-item">{{ i18n "notFound"}}</h1>
+            <h1 class="flex-item"> 🏜️ </h1>
+            <p class="flex-item"><a href="https://asur.dev">{{ i18n "goBackHome" }}</a></p>
+        </main>
+    </body>
+</html>
