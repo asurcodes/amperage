@@ -38,6 +38,7 @@
   "amp-pinterest" : "https://cdn.ampproject.org/v0/amp-pinterest-0.1.js",
   "amp-reach-player" : "https://cdn.ampproject.org/v0/amp-reach-player-0.1.js",
   "amp-reddit" : "https://cdn.ampproject.org/v0/amp-reddit-0.1.js",
+  "amp-script" : "https://cdn.ampproject.org/v0/amp-script-0.1.js",
   "amp-selector" : "https://cdn.ampproject.org/v0/amp-selector-0.1.js",
   "amp-sidebar" : "https://cdn.ampproject.org/v0/amp-sidebar-0.1.js",
   "amp-social-share" : "https://cdn.ampproject.org/v0/amp-social-share-0.1.js",
