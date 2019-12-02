@@ -12,7 +12,7 @@ body {
 	grid-gap: 1em 1em;
 	font-size: 1.2em;
 	font-family:Courier New;
-	line-height:1.5;
+	line-height:2;
 	color:#333;
 }
 
@@ -137,6 +137,16 @@ article > .highlight {
 		background-color: #F1F1F1;
 	}
 }
+
+/* Natural flow and rhythm in articles by default */
+
+article > * {
+	margin-top: 1.5em;
+}
+article h1 {
+	margin-top: 0.25em;
+}
+
 
 .post__image {
 	max-width: 1000px;

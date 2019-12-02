@@ -61,11 +61,3 @@ textarea,
 select {
   font: inherit;
 }
-
-/* Natural flow and rhythm in articles by default */
-article > * {
-	margin-top: 1em;
-}
-article h1 {
-	margin-top: 0.25em;
-}
