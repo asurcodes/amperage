@@ -10,7 +10,7 @@ body {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-gap: 1em 1em;
-	font-size: 14pt;
+	font-size: 1.2em;
 	font-family:Courier New;
 	line-height:1.5;
 	color:#333;
@@ -46,13 +46,13 @@ h1 {
 	font-size: 5rem;
 }
 h2 {
-	font-size: 2rem;
+	font-size: 2.5rem;
 }
 h3 {
-	font-size: 1.5rem;
+	font-size: 2rem;
 }
 h4 {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 }
 
 a {
@@ -88,7 +88,7 @@ blockquote {
 	}
 	p {
 		color: #555;
-		font-size: 16pt;
+		font-size: 1.25em;
 		font-family: 'Times New Roman', serif;
 	}
 }
@@ -175,13 +175,13 @@ table {
 		margin: .5em 0.75em 0 .5em;
 	}
 	h1 {
-		font-size: 2.25rem;
+		font-size: 2.5rem;
 	}
 	h2 {
-		font-size: 1.75rem;
+		font-size: 2rem;
 	}
 	h3 {
-		font-size: 1.5rem;
+		font-size: 1.66rem;
 	}
 	h4 {
 		font-size: 1.25rem;
