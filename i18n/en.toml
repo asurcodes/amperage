@@ -20,6 +20,8 @@ other = "Share on Twitter"
 other = "Share on Linkedin"
 [sharePinterest]
 other = "Share on Pinterest"
+[toc]
+other = "Table of contents"
 [related]
 other = "Related readings 📖"
 [comments]

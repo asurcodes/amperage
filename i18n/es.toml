@@ -20,6 +20,8 @@ other = "Compartir en Twitter"
 other = "Compartir en Linkedin"
 [sharePinterest]
 other = "Compartir en Pinterest"
+[toc]
+other = "Tabla de contenidos"
 [related]
 other = "Lecturas relacionadas 📖"
 [comments]
