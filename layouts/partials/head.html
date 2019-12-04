@@ -3,6 +3,14 @@
 
 <title>{{ .Title }}</title>
 
+{{ if and .Site.IsMultiLingual .IsHome }}
+    {{- range .Site.Languages -}}
+        {{- if ne .LanguageName $.Site.Language.LanguageName -}}
+            <link rel="alternate" hreflang="{{.}}" href="{{ . | absURL }}" />
+        {{- end -}}
+    {{- end -}}
+{{ end }}
+
 <meta name="description" content="{{if .IsHome}}{{ .Site.Params.Description }}{{else}}{{.Description}}{{end}}" />
 <meta name="theme-color" content="{{ .Site.Params.ThemeColor }}"/>
 <link rel="canonical" href="{{ .Permalink }}" >
