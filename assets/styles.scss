@@ -17,18 +17,32 @@ body {
 }
 
 header {
-	.header__logo {
-		width: 100%;
-		margin: 1em 0 0 0;
-		svg {
-			width: 100%;
-			height: auto;
-		}
+	margin-top: 1em;
+	.header__menu {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		overflow: auto;
+		justify-content: flex-start;
+		border: 1px solid #333;
 		a {
 			border-bottom: none;
-			box-shadow: none;
 			&:hover {
-				background: initial;
+				color: $main-color;
+			}
+		}
+		&__logo {
+			line-height: 0;
+		}
+		&__list {
+			display: flex;
+			flex-grow: 1;
+			flex-wrap: nowrap;
+			align-items: center;
+			justify-content: space-around;
+			li {
+				padding: 1em;
+				display: inline;
 			}
 		}
 	}
