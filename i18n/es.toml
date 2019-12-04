@@ -7,7 +7,7 @@ other = "Buscar"
 [goBackHome]
 other = "Volver a la página de inicio"
 [by]
-other = "By"
+other = "por"
 [tags]
 other = "Tags"
 [share]
@@ -26,3 +26,7 @@ other = "Tabla de contenidos"
 other = "Lecturas relacionadas 📖"
 [comments]
 other = "Deja un comentario!  💬"
+[months]
+other = "meses"
+[published]
+other = "{{.Day}} de {{.Month}} {{.Year}}"

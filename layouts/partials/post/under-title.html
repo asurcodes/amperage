@@ -1,9 +1,10 @@
 <section class="under-title">
     <div class="under-title__left">
-        {{ i18n "by" }} {{.Page.Params.Author.Name}} |
         <time datetime="{{ .Page.PublishDate.Format "2006-01-02T15:04:05" | safeHTMLAttr }}">
-            {{.Page.PublishDate.Format "02-01-2006" }}
-        </time>
+            {{ $months := index .Site.Data (i18n "months") }}
+            {{ $month := index $months (printf "%d" .Page.PublishDate.Month) }}
+            {{ i18n "published" (dict "Day" .Page.PublishDate.Day "Month" $month "Year" .Page.PublishDate.Year) }}
+        </time> {{ i18n "by" }} {{.Page.Params.Author.Name}}
         {{ $taxonomy := "tags" }}
         <ul id="{{ $taxonomy }}">
             <li>{{ i18n "tags" }}:</li>&nbsp;

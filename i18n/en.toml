@@ -7,7 +7,7 @@ other = "Search"
 [goBackHome]
 other = "Go back to the homepage"
 [by]
-other = "By"
+other = "by"
 [tags]
 other = "Tags"
 [share]
@@ -26,3 +26,7 @@ other = "Table of contents"
 other = "Related readings 📖"
 [comments]
 other = "Leave a comment!  💬"
+[months]
+other = "months"
+[published]
+other = "{{.Day}} {{.Month}} {{.Year}}"
