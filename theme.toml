@@ -3,13 +3,16 @@ name = "Amperage"
 license = "MIT"
 licenselink = "https://github.com/asurbernardo/amperage/blob/master/LICENSE"
 
-description = "⚡ A GoHugo blog theme with AMP and other SEO goodies ⚡"
+description = "⚡ A GoHugo blog theme, minimal yet feature loaded with AMP, service workers and other SEO goodies ⚡"
 
 homepage = "https://github.com/asurbernardo/amperage"
 
-tags = ["amp", "seo", 'structured-data', 'service-worker', 'service-worker', "blog"]
+tags = ["blog", "personal", "responsive", 'minimal', 'clean', "simple", "google analytics", "light",
+    "minimal", "multilingual", "syntax highlighting", "fast", "customizable", "minimalistic",
+    "technical", "amp"]
 
-features = ["amp", "seo", "toc", "related content", "structured data", 'service-worker', "shortcodes"]
+features = ["amp", "seo", "pwa", "structured data", "toc", "related content", "service-worker", "shortcodes",
+    "syntax highlighting", "tags", "social share"]
 
 min_version = "0.41"
 
