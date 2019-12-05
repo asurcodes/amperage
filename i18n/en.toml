@@ -30,3 +30,7 @@ other = "Leave a comment!  💬"
 other = "months"
 [published]
 other = "{{.Day}} {{.Month}} {{.Year}}"
+[next]
+other = "Next"
+[previous]
+other = "Previous"

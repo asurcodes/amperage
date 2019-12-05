@@ -48,6 +48,20 @@ header {
 	}
 }
 
+main {
+	.pagination {
+		margin: 2em auto;
+		display: flex;
+		justify-content: space-between;
+		a {
+			border-bottom: none;
+			&:hover {
+				color: $main-color;
+			}
+		}
+	}
+}
+
 footer {
 	display: flex;
 	justify-content: space-between;
