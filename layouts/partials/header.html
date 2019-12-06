@@ -3,12 +3,12 @@
         {{- partial "logo.html" . -}}
     </a>
     <ul class="header__menu__list">
-        {{ $internal := in .URL .Site.BaseURL }}
         {{ range .Site.Menus.main }}
+            {{ $url := .URL | absURL }}
+            {{ $isInternal := hasPrefix $url $.Site.BaseURL }}
             <li>
-                <a href="{{ .URL }}" {{ if not $internal }} target="_blank" rel="nofollow noopener noreferrer" {{ end }}>
-                    {{ .Pre }}
-                    <span>{{ .Name }}</span>
+                <a href="{{ $url }}" {{ if not $isInternal }} target="_blank" rel="nofollow noopener noreferrer" {{ end }}>
+                    {{ .Pre }}<span>{{ .Name }}</span>
                 </a>
             </li>
         {{ end }}
