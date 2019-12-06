@@ -9,6 +9,17 @@
     {{- end -}}
 {{ end }}
 
+{{ with .Paginator }}
+    {{ if gt .TotalPages 1 }}
+        {{ if .HasPrev }}
+            <link rel="prev" href="{{ .Prev.URL | absLangURL }}">
+        {{ end }}
+        {{ if .HasNext }}
+            <link rel="next" href="{{ .Next.URL | absLangURL }}">
+        {{ end }}
+    {{ end }}
+{{ end }}
+
 <meta name="description" content="{{if .IsHome}}{{ .Site.Params.Description }}{{else}}{{.Description}}{{end}}" />
 <meta name="theme-color" content="{{ .Site.Params.ThemeColor }}"/>
 <link rel="canonical" href="{{ .Permalink }}" >
