@@ -33,6 +33,10 @@ header {
 		}
 		&__logo {
 			line-height: 0;
+			width: 50px;
+			height: 50px;
+			min-width: 50px;
+			min-height: 50px;
 		}
 		&__list {
 			display: flex;
@@ -41,7 +45,7 @@ header {
 			align-items: center;
 			justify-content: space-around;
 			li {
-				padding: 1em;
+				padding: 0 1em;
 				display: inline;
 			}
 		}
@@ -74,6 +78,7 @@ header, main, footer {
 
 h1, h2, h3, h4 {
 	font-family: Helvetica;
+	line-height: 1.5;
 }
 
 h1 {
@@ -128,14 +133,15 @@ blockquote {
 }
 
 .under-title {
+	margin: 0;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	margin-top: 0;
+	line-height: 1.5;
+	font-size: 1rem;
 	&__left,
 	&__right {
 		align-self: center;
-		margin-top: 1em;
 	}
 }
 
@@ -148,6 +154,8 @@ blockquote {
 }
 
 .social-share {
+	display: flex;
+	align-items: center;
 	amp-social-share {
 		margin: 0 .5em;
 		border-radius: 50%;
@@ -178,7 +186,7 @@ article > * {
 	margin-top: 1.5em;
 }
 article h1 {
-	margin-top: 0.25em;
+	margin-top: 0.5em;
 }
 
 table {
@@ -212,7 +220,17 @@ table {
 	header,
 	footer {
 		grid-column: 1 / span 12;
+	}
+	main,
+	footer {
 		margin: .5em 0.75em 0 .5em;
+	}
+	header {
+		margin: 0;
+		.header__menu {
+			border: none;
+			border-bottom: 1px solid #333;
+		}
 	}
 	h1 {
 		font-size: 2.5rem;
@@ -225,5 +243,15 @@ table {
 	}
 	h4 {
 		font-size: 1.25rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.social-share {
+		width: 100%;
+		justify-content: space-around;
+		amp-social-share {
+			margin-top: 1.5em;
+		}
 	}
 }
