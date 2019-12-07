@@ -1,7 +1,7 @@
 +++
-draft: true
+draft = true
 date = "{{ .Date }}"
-publishdate = ""
+publishdate = "{{ .Date }}"
 
 title = "{{ replace .Name "-" " " | title }}"
 
@@ -18,17 +18,10 @@ keywords = []
 
 [author]
     name = ""
-    image = ""
-    bio = ""
     homepage = ""
 
 [image]
     src = ""
-    title = ""
-    author = ""
-    link = ""
-    license = ""
-    licenseLink = ""
 
 [ogp]
     title = ""
@@ -45,8 +38,7 @@ keywords = []
     site = ""
 
 [sitemap]
-  changefreq = "monthly"
-  priority = 0.5
-  filename = "sitemap.xml"
-
+    changefreq = "monthly"
+    priority = 0.5
+    filename = "sitemap.xml"
 +++
