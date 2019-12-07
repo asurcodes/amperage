@@ -1,0 +1,10 @@
+<style amp-custom>
+    {{ with resources.Get "styles.scss" | resources.ToCSS | resources.Minify }}
+        {{ .Content | safeCSS }}
+    {{ end }}
+    {{ if resources.Get "custom.scss" }}
+        {{ with resources.Get "custom.scss" | resources.ToCSS | resources.Minify }}
+            {{ .Content | safeCSS }}
+        {{ end }}
+    {{ end }}
+</style>

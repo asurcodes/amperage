@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html ⚡ lang="{{.Site.LanguageCode}}">
-    <head>
-        {{- partial "head.html" . -}}
-    </head>
-    <body>
-        {{- partial "install-sw.html" . -}}
-        {{- partial "analytics.html" . -}}
-        {{- partial "structured-data.html" . -}}
-        <header>
-            {{- partial "header.html" . -}}
-        </header>
-        <main>
-            {{- block "main" . }}{{- end }}
-        </main>
-        <footer>
-            {{- partial "footer.html" . -}}
-        </footer>
-    </body>
+	<head>
+		{{- partial "head/base.html" . -}}
+	</head>
+	<body>
+		{{- partial "page/install-sw.html" . -}}
+		{{- partial "page/analytics.html" . -}}
+		{{- partial "structured-data/base.html" . -}}
+		<header>
+			{{- partial "header/base.html" . -}}
+		</header>
+		<main>
+			{{- block "main" . }}{{- end }}
+		</main>
+		<footer>
+			{{- partial "footer/base.html" . -}}
+		</footer>
+	</body>
 </html>

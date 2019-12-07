@@ -1,0 +1,31 @@
+<section class="under-title">
+    <div class="under-title__left">
+        <time datetime="{{ .Page.PublishDate.Format "2006-01-02T15:04:05" | safeHTMLAttr }}">
+            {{ $months := index .Site.Data (i18n "months") }}
+            {{ $month := index $months (printf "%d" .Page.PublishDate.Month) }}
+            {{ i18n "published" (dict "Day" .Page.PublishDate.Day "Month" $month "Year" .Page.PublishDate.Year) }}
+        </time> {{ i18n "by" }} {{.Page.Params.Author.Name}}
+        {{ $taxonomy := "tags" }}
+        <ul id="{{ $taxonomy }}">
+            <li>{{ i18n "tags" }}:</li>&nbsp;
+            {{ range .Page.Param $taxonomy }}
+                {{ $name := . }}
+                {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy ($name | urlize)) }}
+                    <li><a href="{{ .Permalink }}" data-rel="prefetch">{{ $name }}</a></li>
+                {{ end }}
+            {{ end }}
+        </ul>
+    </div>
+    <div class="under-title__right social-share">
+        <amp-social-share class="social-share__button"
+            aria-label="{{ i18n "share" }}" type="system" width="50" height="50"></amp-social-share>
+        <amp-social-share class="social-share__button"
+            aria-label="{{ i18n "shareFacebook" }}" type="facebook" width="50" height="50"></amp-social-share>
+        <amp-social-share class="social-share__button"
+            aria-label="{{ i18n "shareTwitter" }}" type="twitter" width="50" height="50"></amp-social-share>
+        <amp-social-share class="social-share__button"
+            aria-label="{{ i18n "shareLinkedin" }}" type="linkedin" width="50" height="50"></amp-social-share>
+        <amp-social-share class="social-share__button"
+            aria-label="{{ i18n "sharePinterest" }}" type="pinterest" width="50" height="50"></amp-social-share>
+    </div>
+</section>

@@ -1,10 +1,6 @@
 {{ define "main" }}
-
-<article>
-    <!-- Content -->
-    {{ .Content }}
-    <!-- Related content -->
-    {{- partial "post/related-content.html" . -}}
-</article>
-
+	<article>
+		{{ .Content }}
+		{{- partial "post/related-content.html" . -}}
+	</article>
 {{ end }}

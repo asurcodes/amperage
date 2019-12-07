@@ -1,0 +1,10 @@
+{{ with .Paginator }}
+    {{ if gt .TotalPages 1 }}
+        {{ if .HasPrev }}
+            <link rel="prev" href="{{ .Prev.URL | absLangURL }}">
+        {{ end }}
+        {{ if .HasNext }}
+            <link rel="next" href="{{ .Next.URL | absLangURL }}">
+        {{ end }}
+    {{ end }}
+{{ end }}

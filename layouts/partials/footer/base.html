@@ -1,0 +1,13 @@
+<div class="footer__copyright">© {{ .Site.Params.Copyright }} {{ now.Format "2006" }}</div>
+
+<div class="footer__languages">
+	{{ if .Site.IsMultiLingual }}
+		{{ range .Site.Languages }}
+			{{ if eq .LanguageName $.Site.Language.LanguageName }}
+				<b>{{ .LanguageName }}</b>
+			{{ else }}
+				<a href="{{ . | absURL }}" data-rel="prefetch">{{ .LanguageName }}</a>
+			{{ end }}
+		{{ end }}
+	{{ end }}
+</div>

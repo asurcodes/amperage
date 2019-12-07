@@ -2,13 +2,11 @@
 	<article>
 		{{.Content}}
 	</article>
-
 	{{ range .Paginator.Pages }}
-	<article>
-		<h2><a href="{{.Permalink}}" data-rel="prefetch">{{.Title}}</a></h2>
-		<p>{{.Summary}}</p>
-	</article>
+		<article>
+			<h2><a href="{{.Permalink}}" data-rel="prefetch">{{.Title}}</a></h2>
+			<p>{{.Summary}}</p>
+		</article>
 	{{ end }}
-	{{- partial "pagination.html" . -}}
-
+	{{- partial "page/pagination.html" . -}}
 {{ end }}

@@ -1,0 +1,6 @@
+<meta property="og:title" content="{{ .Params.Ogp.Title | default .Title }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:description" content="{{if .IsHome}}{{ .Site.Params.Description }}{{else}}{{.Params.Ogp.Description | default .Description}}{{end}}">
+<meta property="og:image" content="{{ .Params.Ogp.Image | default .Params.Image.Src | default "logo.png" | absURL}}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="{{ .Params.Ogp.Site | default .Page.Params.FacebookSite }}">
