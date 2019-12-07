@@ -1,49 +1,47 @@
-{{ if eq .Page.Kind "page" }}
 <script type="application/ld+json">
-	{
-		"@context":"http://schema.org",
-		"@type": "BlogPosting",
-		"image": "{{ .Page.Params.Image.Src | absURL }}",
-		"url": "{{ .Permalink }}",
-		"headline": "{{ .Page.Title }}",
-		"alternativeHeadline": "{{ .Page.Title }}",
-		"dateCreated": "{{ .Page.Date.Format "2006-01-02T15:04:05" }}",
-		"datePublished": "{{ .Page.PublishDate.Format "2006-01-02T15:04:05" }}",
-		"dateModified": "{{ .Page.PublishDate.Format "2006-01-02T15:04:05" }}",
-		"inLanguage": "{{ .Site.LanguageCode }}",
-		"isFamilyFriendly": "true",
-		"copyrightYear": "{{ .Page.PublishDate.Format "2006" }}",
-		"copyrightHolder": "{{ .Page.Params.Author.Name }}",
-		"accountablePerson": {
-			"@type": "Person",
-			"name": "{{ .Page.Params.Author.Name }}",
-			"url": "{{ .Page.Params.Author.Homepage }}"
-		},
-		"author": {
-			"@type": "Person",
-			"name": "{{ .Page.Params.Author.Name }}",
-			"url": "{{ .Page.Params.Author.Homepage | absURL }}"
-		},
-		"creator": {
-			"@type": "Person",
-			"name": "{{ .Page.Params.Author.Name }}",
-			"url": "{{ .Page.Params.Author.Homepage | absURL }}"
-		},
-		"publisher": {
-			"@type": "Organization",
-			"name": "{{ .Site.Params.PublisherName }}",
-			"url": "{{ .Site.BaseURL }}",
-			"logo": {
-				"@type": "ImageObject",
-				"url": "{{ .Site.Params.PublisherLogo }}",
-				"width":"{{ .Site.Params.PublisherLogoWidth }}",
-				"height":"{{ .Site.Params.PublisherLogoHeight }}"
-			}
-		},
-		"mainEntityOfPage": "{{ .Page.Permalink }}",
-		"keywords": {{ .Params.Keywords | jsonify }},
-		"genre": {{ .Params.Tags | jsonify }},
-		"articleSection": "{{ .Page.Parent.Title }}"
-	}
+  {
+    "@context":"http://schema.org",
+    "@type": "BlogPosting",
+    "image": "{{ .Page.Params.Image.Src | absURL }}",
+    "url": "{{ .Permalink }}",
+    "headline": "{{ .Page.Title }}",
+    "alternativeHeadline": "{{ .Page.Title }}",
+    "dateCreated": "{{ .Page.Date.Format "2006-01-02T15:04:05" }}",
+    "datePublished": "{{ .Page.PublishDate.Format "2006-01-02T15:04:05" }}",
+    "dateModified": "{{ .Page.PublishDate.Format "2006-01-02T15:04:05" }}",
+    "inLanguage": "{{ .Site.LanguageCode }}",
+    "isFamilyFriendly": "true",
+    "copyrightYear": "{{ .Page.PublishDate.Format "2006" }}",
+    "copyrightHolder": "{{ .Page.Params.Author.Name }}",
+    "accountablePerson": {
+      "@type": "Person",
+      "name": "{{ .Page.Params.Author.Name }}",
+      "url": "{{ .Page.Params.Author.Homepage }}"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "{{ .Page.Params.Author.Name }}",
+      "url": "{{ .Page.Params.Author.Homepage | absURL }}"
+    },
+    "creator": {
+      "@type": "Person",
+      "name": "{{ .Page.Params.Author.Name }}",
+      "url": "{{ .Page.Params.Author.Homepage | absURL }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ .Site.Params.PublisherName }}",
+      "url": "{{ .Site.BaseURL }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ .Site.Params.PublisherLogo }}",
+        "width":"{{ .Site.Params.PublisherLogoWidth }}",
+        "height":"{{ .Site.Params.PublisherLogoHeight }}"
+      }
+    },
+    "mainEntityOfPage": "{{ .Page.Permalink }}",
+    "keywords": {{ .Params.Keywords | jsonify }},
+    "genre": {{ .Params.Tags | jsonify }},
+    "articleSection": "{{ .Page.Parent.Title }}"
+  }
 </script>
-{{ end }}

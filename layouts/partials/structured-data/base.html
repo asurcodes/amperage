@@ -1,4 +1,11 @@
-{{- partial "structured-data/website.html" . -}}
+{{ if .IsHome }}
+	{{- partial "structured-data/website.html" . -}}
+{{end}}
+
 {{- partial "structured-data/breadcrumbs.html" . -}}
-{{- partial "structured-data/article.html" . -}}
+
+{{ if eq .Page.Kind "page" }}
+	{{- partial "structured-data/article.html" . -}}
+{{ end }}
+
 {{- partial "structured-data/carousel.html" . -}}
