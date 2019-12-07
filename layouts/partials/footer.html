@@ -6,7 +6,7 @@
 			{{ if eq .LanguageName $.Site.Language.LanguageName }}
 				<b>{{ .LanguageName }}</b>
 			{{ else }}
-				<a href="{{ . | absURL }}">{{ .LanguageName }}</a>
+				<a href="{{ . | absURL }}" data-rel="prefetch">{{ .LanguageName }}</a>
 			{{ end }}
 		{{ end }}
 	{{ end }}

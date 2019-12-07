@@ -2,6 +2,6 @@
 {{ with $related }}
     <h2>{{ i18n "related" }}</h2>
     {{ range . }}
-        <p><a href="{{.Permalink }}">{{ .Title }}</a></p>
+        <p><a href="{{.Permalink }}" data-rel="prefetch">{{ .Title }}</a></p>
     {{ end }}
 {{ end }}

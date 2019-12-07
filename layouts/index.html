@@ -1,7 +1,7 @@
 {{ define "main" }}
 	{{ range .Paginator.Pages }}
 	<article>
-		<h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
+		<h2><a href="{{.Permalink}}" data-rel="prefetch">{{.Title}}</a></h2>
 		<p>{{.Summary}}</p>
 	</article>
 	{{ end }}

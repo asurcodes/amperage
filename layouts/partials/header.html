@@ -1,5 +1,5 @@
 <nav class="header__menu">
-    <a class="header__menu__logo" href="{{ "/" | absLangURL }}" aria-label="{{ i18n "goBackHome" }}">
+    <a class="header__menu__logo" data-rel="prefetch" href="{{ "/" | absLangURL }}" aria-label="{{ i18n "goBackHome" }}">
         {{- partial "logo.html" . -}}
     </a>
     <ul class="header__menu__list">
@@ -7,7 +7,9 @@
             {{ $url := .URL | absURL }}
             {{ $isInternal := hasPrefix $url $.Site.BaseURL }}
             <li>
-                <a href="{{ $url }}" {{ if not $isInternal }} target="_blank" rel="nofollow noopener noreferrer" {{ end }}>
+                <a href="{{ $url }}"
+                    {{ if not $isInternal }} target="_blank" rel="nofollow noopener noreferrer"
+                    {{else}} data-rel="prefetch" {{ end }}>
                     {{ .Pre }}<span>{{ .Name }}</span>
                 </a>
             </li>
