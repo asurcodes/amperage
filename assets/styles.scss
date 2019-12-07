@@ -250,9 +250,10 @@ table {
 @media (max-width: 600px) {
 	.social-share {
 		width: 100%;
-		justify-content: space-around;
+
+		justify-content: space-between;
 		amp-social-share {
-			margin-top: 1.5em;
+			margin: 1.5em 0 0 0;
 		}
 	}
 }
