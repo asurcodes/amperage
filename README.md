@@ -16,6 +16,10 @@ Amperage is a theme for static site generator [GoHugo](https://gohugo.io/). This
  - Social share.
  - Default table styles.
 
+Lighthouse v5 theme results:
+
+![Lighthouse results](https://raw.githubusercontent.com/asurbernardo/amperage/master/images/lighthouse-results.png)
+
 ## Installation
 
 You can use the `exampleSite` provided to bootstrap your new project:
@@ -30,10 +34,6 @@ mv amperage your-site/themes/amperage
 
 hugo serve
 ```
-
-Lighthouse v5 theme results:
-
-![Lighthouse results](https://raw.githubusercontent.com/asurbernardo/amperage/master/images/lighthouse-results.png)
 
 ## Kitchen sink
 
@@ -117,6 +117,18 @@ To override the default logo add the svg markup on the partial `layouts/header/l
 ## Customize styles
 
 To override default styles just create a file in `assets/custom.scss` on your project and it will be transpiled, minified and appended automatically. The default styles are only 5KB, that leaves you with 45KB of room to still be a valid AMP page.
+
+## Enable cross-domain service worker installation
+
+To enable cross-domain service worker you need to override the file `static/install-sw.html`:
+
+```
+<amp-install-serviceworker
+  src="https://your-site.com/sw.js"
+  data-iframe-src="https://your-site.com/install-sw.html"
+  layout="nodisplay">
+</amp-install-serviceworker>
+```
 
 ## Contributing to Amperage
 
