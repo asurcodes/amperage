@@ -1,4 +1,4 @@
-@TODO Add header
+![Amperage theme](https://raw.githubusercontent.com/asurbernardo/amperage/master/images/banner.png)
 
 Amperage is a theme for static site generator [GoHugo](https://gohugo.io/). This theme provides the following features:
 
