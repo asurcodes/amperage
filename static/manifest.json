@@ -1,0 +1,10 @@
+{
+  "name": "Amperage example",
+  "short_name": "amperage",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#333",
+  "description": "An example site for the Amperage theme.",
+  "icons":[{"src":"/icons/android-chrome-192x192.png","sizes":"192x192","type":"image/png"}]
+}
