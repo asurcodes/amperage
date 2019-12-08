@@ -1,4 +1,4 @@
-@TODO
+@TODO Add header
 
 Amperage is a theme for static site generator [GoHugo](https://gohugo.io/). This theme provides the following features:
 
@@ -11,27 +11,29 @@ Amperage is a theme for static site generator [GoHugo](https://gohugo.io/). This
  - Super fast and lightweight.
  - Minimal and easily overridable styles.
  - Basic AMP shortcodes for ease of use.
- - Seamless code highlighting (block and inline)
+ - Seamless code highlighting.
  - Header menu, table of contents and related posts.
- - Social share
- - Default table styles
+ - Social share.
+ - Default table styles.
 
 ## Installation
 
-You can use the `exampleSite` provided as example to bootstrap your new project:
+You can use the `exampleSite` provided to bootstrap your new project:
 
-```
+```sh
 git clone https://github.com/asurbernardo/amperage.git
-mkdir your-site
-git cp amperage/exampleSite your-site
-mkdir your-site/themes/amperage
+
+mkdir -p your-site/themes/amperage
+
+mv amperage/exampleSite your-site
 mv amperage your-site/themes/amperage
+
 hugo serve
 ```
 
 Lighthouse v6 example site results:
 
-@TODO
+@TODO Add Lighthouse capture
 
 ## Kitchen sink
 
@@ -39,7 +41,7 @@ You can check out all the components of this theme [here](https://asur.dev/en/am
 
 ## Configuration
 
-```
+```toml
 DefaultContentLanguage = "en" # Default language if you have a multi-language setup
 
 baseURL = "https://example.com"
@@ -77,7 +79,7 @@ paginate = 2 # Number of posts shown per page
     url = "https://github.com/asurbernardo/amperage"
     weight = 10
 
-# Enable only tag toxonomy
+# Enable only tags taxonomy
 [taxonomies]
     tag = "tags"
 
@@ -106,9 +108,16 @@ paginate = 2 # Number of posts shown per page
     publisherLogo = "/logo-amp-article.png"
     publisherLogoWidth = 600
     publisherLogoHeight = 60
-
 ```
 
-## Contribute
+## Customize logo
 
-@TODO
+To override the default logo add the svg markup on the partial `layouts/header/logo.html`.
+
+## Customize styles
+
+To override default styles just create a file in `assets/custom.scss` on your project and it will be transpiled, minified and appended automatically. The default styles are only 5KB, that leaves you with 45KB of room to still be a valid AMP page.
+
+## Contributing to Amperage
+
+If you have a feature request or have found a bug feel free to open an issue on this repository.
