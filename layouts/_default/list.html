@@ -1,11 +1,11 @@
 {{ define "main" }}
-	<article>
+	<article class="content">
 		{{.Content}}
 	</article>
 	{{ range .Paginator.Pages }}
-		<article>
-			<h2><a href="{{.Permalink}}" data-rel="prefetch">{{.Title}}</a></h2>
-			<p>{{.Summary}}</p>
+		<article class="summary">
+			<h2 class="summary__title"><a href="{{.Permalink}}" data-rel="prefetch">{{.Title}}</a></h2>
+			<p class="summary__content">{{.Summary}}</p>
 		</article>
 	{{ end }}
 	{{- partial "page/pagination.html" . -}}

@@ -1,5 +1,5 @@
 <section class="under-title">
-    <div class="under-title__left">
+    <div class="under-title__info">
         <time datetime="{{ .Page.PublishDate.Format "2006-01-02T15:04:05" | safeHTMLAttr }}">
             {{ $months := index .Site.Data (i18n "months") }}
             {{ $month := index $months (printf "%d" .Page.PublishDate.Month) }}
@@ -16,16 +16,16 @@
             {{ end }}
         </ul>
     </div>
-    <div class="under-title__right social-share">
-        <amp-social-share class="social-share__button"
+    <div class="under-title__social-share">
+        <amp-social-share class="under-title__social-share__button"
             aria-label="{{ i18n "share" }}" type="system" width="50" height="50"></amp-social-share>
-        <amp-social-share class="social-share__button"
+        <amp-social-share class="under-title__social-share__button"
             aria-label="{{ i18n "shareFacebook" }}" type="facebook" width="50" height="50"></amp-social-share>
-        <amp-social-share class="social-share__button"
+        <amp-social-share class="under-title__social-share__button"
             aria-label="{{ i18n "shareTwitter" }}" type="twitter" width="50" height="50"></amp-social-share>
-        <amp-social-share class="social-share__button"
+        <amp-social-share class="under-title__social-share__button"
             aria-label="{{ i18n "shareLinkedin" }}" type="linkedin" width="50" height="50"></amp-social-share>
-        <amp-social-share class="social-share__button"
+        <amp-social-share class="under-title__social-share__button"
             aria-label="{{ i18n "sharePinterest" }}" type="pinterest" width="50" height="50"></amp-social-share>
     </div>
 </section>

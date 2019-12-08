@@ -7,13 +7,13 @@
 		{{- partial "page/install-sw.html" . -}}
 		{{- partial "page/analytics.html" . -}}
 		{{- partial "structured-data/base.html" . -}}
-		<header>
+		<header class="header">
 			{{- partial "header/base.html" . -}}
 		</header>
-		<main>
+		<main class="main">
 			{{- block "main" . }}{{- end }}
 		</main>
-		<footer>
+		<footer class="footer">
 			{{- partial "footer/base.html" . -}}
 		</footer>
 	</body>
