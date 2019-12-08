@@ -33,7 +33,7 @@ hugo serve
 
 Lighthouse v6 example site results:
 
-@TODO Add Lighthouse capture
+![Lighthouse results](https://raw.githubusercontent.com/asurbernardo/amperage/master/images/lighthouse-results.png)
 
 ## Kitchen sink
 
