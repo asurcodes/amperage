@@ -31,7 +31,7 @@ mv amperage your-site/themes/amperage
 hugo serve
 ```
 
-Lighthouse v6 example site results:
+Lighthouse v5 theme results:
 
 ![Lighthouse results](https://raw.githubusercontent.com/asurbernardo/amperage/master/images/lighthouse-results.png)
 
