@@ -8,13 +8,14 @@ Amperage is a theme for static site generator [GoHugo](https://gohugo.io/). This
  - Service worker for asset caching, link prefetching and offline navigation.
  - SEO optimized.
  - Multilanguage and i18n support.
+ - Code highlighting on build time.
  - Super fast and lightweight.
  - Minimal and easily overridable styles.
  - Basic AMP shortcodes for ease of use.
- - Seamless code highlighting.
  - Header menu, table of contents and related posts.
- - Social share.
- - Default table styles.
+ - Uses web safe fonts by default.
+ - Social share and OGP/Twitter card tags.
+ - Google analytics with gtag.
 
 Lighthouse v5 theme results:
 
@@ -27,10 +28,12 @@ You can use the `exampleSite` provided to bootstrap your new project:
 ```sh
 git clone https://github.com/asurbernardo/amperage.git
 
-mkdir -p your-site/themes/amperage
+mkdir -p new-site/themes/amperage
 
-mv amperage/exampleSite your-site
-mv amperage your-site/themes/amperage
+mv amperage/exampleSite/* new-site
+mv amperage/* new-site/themes/amperage
+
+cd new-site
 
 hugo serve
 ```
@@ -112,7 +115,7 @@ paginate = 2 # Number of posts shown per page
 
 ## Customize logo
 
-To override the default logo add the svg markup on the partial `layouts/header/logo.html`.
+To override the default logo add the svg markup on the partial `layouts/partials/header/logo.html`.
 
 ## Customize styles
 
