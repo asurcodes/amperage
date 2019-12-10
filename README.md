@@ -14,7 +14,7 @@ Amperage is a theme for static site generator [GoHugo](https://gohugo.io/). This
  - Basic AMP shortcodes for ease of use.
  - Header menu, table of contents and related posts.
  - Uses web safe fonts by default.
- - Social share and OGP/Twitter card tags.
+ - Social share buttons and OGP/Twitter card tags.
  - Google analytics with gtag.
 
 Lighthouse v5 theme results:
