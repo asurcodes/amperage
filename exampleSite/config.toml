@@ -1,7 +1,9 @@
 DefaultContentLanguage = "en" # Default language if you have a multi-language setup
 
 baseURL = "https://example.com"
+
 theme = "amperage"
+
 pygmentsUseClasses = true
 
 paginate = 2 # Number of posts shown per page
@@ -12,15 +14,15 @@ paginate = 2 # Number of posts shown per page
         contentDir = "content"
         languageName = "English"
         languageCode = "en"
-        title = "Amperage theme ⚡"
-        description = "This is an example page for the Amperage theme!"
+        title = "Amperage theme!"
+        description = "This is an demo for the Amperage theme!"
         weight = 1
     [languages.es]
         contentDir = "content/spanish"
         languageName = "Español"
         languageCode = "es"
-        title = "Tema Amperage ⚡"
-        description = "Esta es una página de ejemplo para el tema Amperage!"
+        title = "Tema Amperage!"
+        description = "Esta es una demo para el tema Amperage!"
         weight = 2
 
 # Menu elements
@@ -47,7 +49,7 @@ paginate = 2 # Number of posts shown per page
     ampElements = ["amp-analytics", "amp-social-share", "amp-install-serviceworker"]
 
     # Google Analytics code
-    googleAnalytics = "UA-128498798-1"
+    # googleAnalytics = "UA-xxxxxxxxx-x"
 
     # Social sites for metatags
     facebookSite = "example"
