@@ -3,7 +3,7 @@ name = "Amperage"
 license = "MIT"
 licenselink = "https://github.com/asurbernardo/amperage/blob/master/LICENSE"
 
-description = "⚡ A GoHugo blog theme, minimal yet feature loaded with AMP, service workers, structured data and more! ⚡"
+description = "Minimal yet feature loaded with AMP, service workers, structured data, multilanguage and more!"
 
 homepage = "https://github.com/asurbernardo/amperage"
 
