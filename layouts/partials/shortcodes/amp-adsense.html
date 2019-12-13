@@ -1,14 +1,15 @@
-
-<fieldset class="ad">
-    <legend><b>#ad</b></legend>      
-    <amp-ad type="adsense"
-        {{ with .class }} class="{{ . }}"{{ end }}
-        {{ with .alt }} alt="{{ . }}"{{ end }}
-        {{ with .width }} width="{{ . }}"{{ end }}
-        {{ with .height }} height="{{ . }}"{{ end }}
-        {{ with .layout }} layout="{{ . }}"{{ end }}
-        {{ with .slot }} data-ad-slot="{{ . }}" {{ end }}
-        {{ with .Site.Params.AdsensePublisher }} data-ad-client="{{ . }}" {{ end }}>
-        <div class="ad__fallback" fallback><p>No ad for you! :(</p></div>
-    </amp-ad>
-</fieldset>
+{{ if isset $.Site.Params "adsensepublisher" }}
+    <fieldset class="ad">
+        <legend><b>#ad</b></legend>      
+        <amp-ad type="adsense"
+            {{ with .class }} class="{{ . }}"{{ end }}
+            {{ with .alt }} alt="{{ . }}"{{ end }}
+            {{ with .width }} width="{{ . }}"{{ end }}
+            {{ with .height }} height="{{ . }}"{{ end }}
+            {{ with .layout }} layout="{{ . }}"{{ end }}
+            {{ with .slot }} data-ad-slot="{{ . }}" {{ end }}
+            data-ad-client="{{ $.Site.Params.adsensePublisher }}">
+            <div class="ad__fallback" fallback><p>No ad for you! :(</p></div>
+        </amp-ad>
+    </fieldset>
+{{ end }}
