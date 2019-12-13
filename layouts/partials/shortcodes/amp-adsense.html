@@ -1,0 +1,10 @@
+<amp-ad type="adsense"
+	{{ with .class }} class="{{ . }}"{{ end }}
+	{{ with .alt }} alt="{{ . }}"{{ end }}
+	{{ with .width }} width="{{ . }}"{{ end }}
+	{{ with .height }} height="{{ . }}"{{ end }}
+    {{ with .layout }} layout="{{ . }}"{{ end }}
+    {{ with .slot }} data-ad-slot="{{ . }}" {{ end }}
+    {{ with .Site.Params.AdsensePublisher }} data-ad-client="." {{ end }}>
+    <div fallback> No ad for you </div>
+</amp-ad>
