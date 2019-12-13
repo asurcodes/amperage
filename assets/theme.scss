@@ -198,8 +198,9 @@ blockquote {
 		}
 	}
 	.ad {
-		display: block;
+		display: flex;
 		margin: auto;
+		align-content: center;
 		width: min-content;
 		border: 1px solid #333;
 	}
