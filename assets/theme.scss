@@ -197,6 +197,12 @@ blockquote {
 			}
 		}
 	}
+	.ad {
+		display: block;
+		margin: auto;
+		width: min-content;
+		border: 1px solid #333;
+	}
 }
 
 @media (max-width: 1200px) {
