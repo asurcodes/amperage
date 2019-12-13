@@ -6,6 +6,7 @@ body {
 	font-family: Courier New;
 	line-height: 2;
 	color: #333;
+	min-height: 100vh;
 }
 
 .header, .main, .footer {
@@ -51,6 +52,7 @@ body {
 }
 
 .main {
+	min-height: 80vh;
 	.pagination {
 		margin: 2em auto;
 		display: flex;
