@@ -1,3 +1,6 @@
+
+<fieldset>
+<legend><b>ad</b></legend>      
 <amp-ad type="adsense"
 	{{ with .class }} class="{{ . }}"{{ end }}
 	{{ with .alt }} alt="{{ . }}"{{ end }}
@@ -5,6 +8,9 @@
 	{{ with .height }} height="{{ . }}"{{ end }}
     {{ with .layout }} layout="{{ . }}"{{ end }}
     {{ with .slot }} data-ad-slot="{{ . }}" {{ end }}
-    {{ with .Site.Params.AdsensePublisher }} data-ad-client="." {{ end }}>
+    {{ with .Site.Params.AdsensePublisher }} data-ad-client="." {{ end }}
+    data-auto-format="rspv"
+    data-full-width="">
     <div fallback> No ad for you </div>
 </amp-ad>
+</fieldset>
