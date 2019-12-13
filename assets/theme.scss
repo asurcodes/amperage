@@ -203,6 +203,13 @@ blockquote {
 		align-content: center;
 		width: min-content;
 		border: 1px solid #333;
+		&__fallback {
+			display: flex;
+			align-items: center;
+			p {
+				margin:auto;
+			}
+		}
 	}
 }
 

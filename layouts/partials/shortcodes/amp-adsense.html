@@ -8,7 +8,7 @@
         {{ with .height }} height="{{ . }}"{{ end }}
         {{ with .layout }} layout="{{ . }}"{{ end }}
         {{ with .slot }} data-ad-slot="{{ . }}" {{ end }}
-        {{ with .Site.Params.AdsensePublisher }} data-ad-client="{{.}}" {{ end }}>
-        <div fallback> No ad for you </div>
+        {{ with .Site.Params.AdsensePublisher }} data-ad-client="{{ . }}" {{ end }}>
+        <div class="ad__fallback" fallback><p>No ad for you! :(</p></div>
     </amp-ad>
 </fieldset>
