@@ -2,6 +2,6 @@
 	<article class="content">
 		{{ .Content }}
 		{{- partial "post/related-content.html" . -}}
+		{{- partial "post/comments.html" . -}}
 	</article>
-	{{- partial "post/comments.html" . -}}
 {{ end }}
