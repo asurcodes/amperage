@@ -14,15 +14,13 @@ function receiveMessage(event)
             return false;
 
         if (msg.name === 'resize' || msg.name === 'rendered') {
-            console.log('Origin', event.origin);
-            console.log('Source', event.source);
-            console.log('Message', msg);
-            console.log('Size', document.body.scrollHeight);
-            window.parent.postMessage({
-              sentinel: 'amp',
-              type: 'embed-size',
-              height: document.body.scrollHeight
-            }, '*');
+            window.requestAnimationFrame(() => {
+                window.parent.postMessage({
+                sentinel: 'amp',
+                type: 'embed-size',
+                height: document.body.scrollHeight
+                }, '*');
+            }
         }
     }
 }
