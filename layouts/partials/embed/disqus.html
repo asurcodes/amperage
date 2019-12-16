@@ -1,45 +1,65 @@
-<div id="disqus_thread"></div>
-<script>
-window.addEventListener('message', receiveMessage, false);
-function receiveMessage(event)
-{
-    if (event.data) {
-        var msg;
-        try {
-            msg = JSON.parse(event.data);
-        } catch (err) {
-            // Do nothing
+---
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <title>Disqus</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="robots" content="noindex" />
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
         }
-        if (!msg)
-            return false;
+    </style>
+</head>
+<body>
+    <div id="disqus_thread"></div>
+    <script>
+    window.addEventListener('message', receiveMessage, false);
+    function receiveMessage(event)
+    {
+        if (event.data) {
+            var msg;
+            try {
+                msg = JSON.parse(event.data);
+            } catch (err) {
+                // Do nothing
+            }
+            if (!msg)
+                return false;
 
-        if (msg.name === 'resize' || msg.name === 'rendered') {
-            window.requestAnimationFrame(() => {
-                window.parent.postMessage({
-                sentinel: 'amp',
-                type: 'embed-size',
-                height: document.body.scrollHeight
-                }, '*');
-            });
+            if (msg.name === 'resize' || msg.name === 'rendered') {
+                window.requestAnimationFrame(() => {
+                    window.parent.postMessage({
+                    sentinel: 'amp',
+                    type: 'embed-size',
+                    height: document.body.scrollHeight
+                    }, '*');
+                });
+            }
         }
     }
-}
-</script>
-<script>
-    /**
-     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-     */
-    var disqus_config = function () {
-        this.page.url = window.location;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = window.location.hash; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    (function() {  // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
+    </script>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        var disqus_config = function () {
+            this.page.url = window.location;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = window.location.hash; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() {  // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
 
-        s.src = 'https://{{ .Site.Params.DisqusName }}.disqus.com/embed.js';
+            s.src = 'https://{{ .Site.Params.DisqusName }}.disqus.com/embed.js';
 
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+</body>
+</html>
