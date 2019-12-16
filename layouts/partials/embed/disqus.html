@@ -18,7 +18,8 @@ function receiveMessage(event)
                 window.parent.postMessage({
                 sentinel: 'amp',
                 type: 'embed-size',
-                height: msg.data.height
+                height: msg.data.height,
+                width: 1000
                 }, '*');
             });
         }
