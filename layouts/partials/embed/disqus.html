@@ -7,7 +7,6 @@ function receiveMessage(event)
         var msg;
         try {
             msg = JSON.parse(event.data);
-            console.log('Message', msg);
         } catch (err) {
             // Do nothing
         }
@@ -15,6 +14,8 @@ function receiveMessage(event)
             return false;
 
         if (msg.name === 'resize' || msg.name === 'rendered') {
+            console.log(event.source)
+            console.log('Message', msg);
             console.log('Resizing', document.body.scrollHeight)
             window.parent.postMessage({
               sentinel: 'amp',
