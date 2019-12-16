@@ -7,6 +7,7 @@ function receiveMessage(event)
         var msg;
         try {
             msg = JSON.parse(event.data);
+            console.log('Message', msg);
         } catch (err) {
             // Do nothing
         }
