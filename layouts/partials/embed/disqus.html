@@ -3,6 +3,7 @@
 window.addEventListener('message', receiveMessage, false);
 function receiveMessage(event)
 {
+    console.log(event.origin);
     if (event.data) {
         var msg;
         try {
@@ -14,6 +15,7 @@ function receiveMessage(event)
             return false;
 
         if (msg.name === 'resize' || msg.name === 'rendered') {
+            console.log('Resizing', msg.data.height)
             window.parent.postMessage({
               sentinel: 'amp',
               type: 'embed-size',
