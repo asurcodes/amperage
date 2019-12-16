@@ -1,9 +1,9 @@
-{{ if isset .Site.Params "disqusshortname" }}
+{{ if isset .Site.Params "disqusurl" }}
     <amp-iframe width=600 height=180
         layout="responsive"
         sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
         resizable
-        src="https://{{ .Site.Params.DisqusDomain }}#{{ .Page.URL }}">
+        src="{{ .Site.Params.DisqusUrl }}#{{ .Page.URL }}">
         <div overflow
             tabindex=0
             role=button
