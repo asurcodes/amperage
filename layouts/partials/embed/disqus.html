@@ -18,7 +18,7 @@ function receiveMessage(event)
                 window.parent.postMessage({
                 sentinel: 'amp',
                 type: 'embed-size',
-                height: 1000
+                height: msg.data.height
                 }, '*');
             });
         }
@@ -37,7 +37,7 @@ function receiveMessage(event)
     (function() {  // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
 
-        s.src = 'https://{{ .Site.Params.DisqusName }}.disqus.com/embed.js';
+        s.src = 'https://{{ .Site.Params.DisqusShortname }}.disqus.com/embed.js';
 
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
