@@ -3,7 +3,7 @@
         layout="responsive"
         sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
         resizable
-        src="{{ .Site.Params.CommentsEmbedUrl }}#{{ .UniqueID }}">
+        src="{{ .Site.Params.CommentsEmbedUrl }}?id={{ .UniqueID }}&url={{ .Permalink }}">
         <div overflow
             tabindex=0
             role=button
