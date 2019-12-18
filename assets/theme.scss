@@ -215,9 +215,8 @@ blockquote {
 	}
 	.ad {
 		display: flex;
-		margin: auto;
+		margin: 1rem auto;
 		align-content: center;
-		width: min-content;
 		border: 1px solid #333;
 		&__fallback {
 			display: flex;

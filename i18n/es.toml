@@ -34,3 +34,5 @@ other = "{{.Day}} de {{.Month}} {{.Year}}"
 other = "Siguiente"
 [previous]
 other = "Anterior"
+[noAd]
+other = "Te quedas sin anuncio!"

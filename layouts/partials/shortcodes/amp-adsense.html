@@ -1,7 +1,7 @@
 {{ if isset $.Site.Params "adsensepublisher" }}
     {{ with .Params }}
         <fieldset class="ad">
-            <legend><b>#ad</b></legend>      
+            <legend><b>#ad</b></legend>
             <amp-ad type="adsense"
                 {{ with .class }} class="{{ . }}"{{ end }}
                 {{ with .alt }} alt="{{ . }}"{{ end }}
@@ -10,7 +10,7 @@
                 {{ with .layout }} layout="{{ . }}"{{ end }}
                 {{ with .slot }} data-ad-slot="{{ . }}" {{ end }}
                 data-ad-client="{{ $.Site.Params.adsensePublisher }}">
-                <div class="ad__fallback" fallback><p>No ad for you! :(</p></div>
+                <div class="ad__fallback" fallback><p>{{ i18n "noAd" }}</p></div>
             </amp-ad>
         </fieldset>
     {{ end }}
@@ -18,7 +18,7 @@
     {{ if isset . "context" }}
         {{ $publisher := .context.Site.Params.adsensePublisher }}
         <fieldset class="ad">
-            <legend><b>#ad</b></legend>      
+            <legend><b>#ad</b></legend>
             <amp-ad type="adsense"
                 {{ with .class }} class="{{ . }}"{{ end }}
                 {{ with .alt }} alt="{{ . }}"{{ end }}
@@ -27,7 +27,7 @@
                 {{ with .layout }} layout="{{ . }}"{{ end }}
                 {{ with .slot }} data-ad-slot="{{ . }}" {{ end }}
                 data-ad-client="{{ $publisher }}">
-                <div class="ad__fallback" fallback><p>No ad for you! :(</p></div>
+                <div class="ad__fallback" fallback><p>{{ i18n "noAd" }}</p></div>
             </amp-ad>
         </fieldset>
     {{ end }}
