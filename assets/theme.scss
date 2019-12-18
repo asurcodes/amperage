@@ -217,6 +217,10 @@ blockquote {
 		display: flex;
 		margin: 1rem auto;
 		align-content: center;
+		width: min-content;
+		height: min-content;
+		min-width: 320px;
+		min-height: 320px;
 		border: 1px solid #333;
 		&__fallback {
 			display: flex;
