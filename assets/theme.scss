@@ -126,6 +126,21 @@ blockquote {
 	}
 }
 
+.figure {
+	position: relative;
+	&__caption {
+		display: block;
+		position: absolute;
+		max-width: 60%;
+		bottom: 1rem;
+		left: -1rem;
+		padding: 0 1rem;
+		background-color: #333;
+		color: white;
+		font-weight: 700;
+	}
+}
+
 #tags {
 	margin: 0;
 	padding: 0;
@@ -253,5 +268,12 @@ blockquote {
 		width: 100%;
 		margin-top: 1.5em;
 		justify-content: space-between;
+	}
+	.figure {
+		position: relative;
+		&__caption {
+			position: relative;
+			max-width: 100%;
+		}
 	}
 }

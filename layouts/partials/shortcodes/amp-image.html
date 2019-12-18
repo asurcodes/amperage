@@ -1,5 +1,6 @@
-<amp-img
-	{{ with .class }}class="{{ . }}"{{ end }}
+<figure class="figure">
+	<amp-img 
+	class="figure__image {{ with .class }}{{ . }}{{ end }}"
 	{{ with .alt }}alt="{{ range (split . " ") }}{{ . }} {{ end }}"{{ end }}
 	{{ with .attribution }}attribution="{{ range (split . " ") }}{{ . }} {{ end }}"{{ end }}
 	{{ with .srcset }}srcset="{{ range (split . " ") }}{{ . | absURL }} {{ end }}"{{ end }}
@@ -9,5 +10,7 @@
 	{{ with .width }}width="{{ . }}"{{ end }}
 	{{ with .height }}height="{{ . }}"{{ end }}
 	{{ with .layout }}layout="{{ . }}"{{ end }}
-	{{ with .src }}src="{{ . | absURL}}"{{ end }}>
-</amp-img>
+	{{ with .media }}media="{{ . }}"{{ end }}
+	{{ with .src }}src="{{ . | absURL}}"{{ end }}></amp-img>
+	{{ with .caption }}<figcaption class="figure__caption">{{ . }}</figcaption>{{ end }}
+</figure>
