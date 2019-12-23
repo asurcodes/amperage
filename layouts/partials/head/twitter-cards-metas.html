@@ -2,5 +2,5 @@
 <meta name="twitter:title" content="{{ .Params.Twitter.Title | default .Title }}">
 <meta name="twitter:url" content="{{ .Permalink }}">
 <meta name="twitter:description" content="{{ cond .IsHome .Site.Params.Description (.Params.Twitter.Description | default .Description) }}">
-<meta name="twitter:image" content="{{ .Params.Twitter.Image | default .Params.Image.Src | default ("logo.png" | absURL) }}">
+<meta name="twitter:image" content="{{ .Params.Twitter.Image | default .Params.Image.Src | default "logo.png" | absURL }}">
 <meta name="twitter:site" content="{{ .Params.Twitter.Site | default .Site.Params.TwitterSite }}">
