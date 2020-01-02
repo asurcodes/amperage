@@ -16,6 +16,8 @@ Amperage is a theme for static site generator [GoHugo](https://gohugo.io/). This
  - Uses web safe fonts by default.
  - Social share buttons and OGP/Twitter card tags.
  - Google analytics with gtag.
+ - Configurable Adsense shortcode.
+ - Comment system agnostic.
 
 Lighthouse v5 theme results:
 
@@ -51,7 +53,8 @@ baseURL = "https://example.com"
 theme = "amperage"
 pygmentsUseClasses = true
 
-paginate = 2 # Number of posts shown per page
+# Number of posts shown per page
+paginate = 2
 
 # Language sections
 [languages]
@@ -96,6 +99,12 @@ paginate = 2 # Number of posts shown per page
     # Google Analytics code
     googleAnalytics = "UA-128498798-1"
 
+    # Adsense publisher code
+    adsensePublisher = "ca-pub-123456789"
+
+    # Comments Iframe URL
+    commentsEmbedUrl = "https://comments.asur.dev"
+
     # Social sites for metatags
     facebookSite = "example"
     twitterSite = "@example"
@@ -133,6 +142,75 @@ To enable cross-domain service worker you need to override the file `static/inst
 </amp-install-serviceworker>
 ```
 
+## Menu links
+
+On the menu you can set internal and external links. To set external links you can use the `config.toml` file:
+
+```
+[[menu.main]]
+    identifier = "hugo"
+    name = "Hugo"
+    url = "https://gohugo.io"
+    weight = 10
+[[menu.main]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/asurbernardo/amperage"
+    weight = 10
+```
+
+If you want to display a page from your own site on the menu you need can add to the frontmatter of that page:
+```
+menu = "main"
+```
+
+## Display ads
+
+To enable ads you need to have an approved Adsense publisher code. Once you get one set it in the `config.toml`:
+
+```
+adsensePublisher = "ca-pub-123456789"
+```
+
+Now you can use the `amp-ad` shortcode:
+
+```
+{{< amp-adsense
+    width="320"
+    height="320"
+    layout="fixed"
+    slot="123456789" >}}
+```
+
+## Comments
+
+Due to AMP requirements the comments need to be hosted in a domain different from the original. Amperage is ready to receive a URL to embed comments at the end of every post. This is to achieve a degree of agnosticy for the comment system.
+
+Remember that to resize the iframe containing the comment box you need to send a message to the amp sentinel with the new height. This applies to any case.
+
+```
+window.requestAnimationFrame(() => {
+    window.parent.postMessage({
+    sentinel: 'amp',
+    type: 'embed-size',
+    height: msg.data.height
+    }, '*');
+});
+```
+
+If you want to integrate your own comment service Amperage will add the parameters `id` and `url` to the request so you can use them on the iframe, in case you need a unique id:
+
+```
+var urlParams = new URLSearchParams(window.location.search);
+
+var disqus_config = function () {
+    this.page.url = urlParams.get('url');
+    this.page.identifier = urlParams.get('id');
+};
+```
+
+What I personally recommend is to use a new Github Pages project and refer it from your main site. Here you can see a [fully functional example using Disqus](https://github.com/asurbernardo/blog-comments).
+
 ## Contributing to Amperage
 
-If you have a feature request or have found a bug feel free to open an issue on this repository.
+If you have a feature request or have found a bug feel free to open an new issue.
