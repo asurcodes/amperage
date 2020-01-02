@@ -141,6 +141,24 @@ blockquote {
 	}
 }
 
+.post-it {
+	width: 100%;
+	padding: 1.5em;
+	&--tip {
+		background-color: lemonchiffon;
+	}
+	&--info {
+		background-color: lightskyblue;
+	}
+	&--danger {
+		background-color: lightcoral;
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 1.5em;
+	}
+}
+
 #tags {
 	margin: 0;
 	padding: 0;
@@ -160,7 +178,7 @@ blockquote {
 	}
 	pre {
 		overflow: auto;
-		padding: 1em;
+		padding: .5em;
 	}
 	code {
 		padding: 0.1em;
@@ -263,6 +281,10 @@ blockquote {
 	}
 	h4 {
 		font-size: 1.25rem;
+	}
+	.post-it {
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
 
