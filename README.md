@@ -104,7 +104,7 @@ paginate = 2
     adsensePublisher = "ca-pub-123456789"
 
     # Comments Iframe URL
-    commentsEmbedUrl = "https://comments.asur.dev"
+    commentsEmbedUrl = "https://comments.example.com"
 
     # Social sites for metatags
     facebookSite = "example"
