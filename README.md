@@ -160,10 +160,12 @@ On the menu you can set internal and external links. To set external links you c
     weight = 10
 ```
 
-If you want to display a page from your own site on the menu you need can add to the frontmatter of that page:
+If you want to display a page from your own site on the menu you need to add to the frontmatter of that page:
 ```
 menu = "main"
 ```
+
+This distinction is important because the service worker needs to identify the internal URLs so it can eager load them.
 
 ## Display ads
 
