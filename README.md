@@ -47,7 +47,8 @@ You can check out all the components of this theme [here](https://asur.dev/en/am
 ## Configuration
 
 ```toml
-DefaultContentLanguage = "en" # Default language if you have a multi-language setup
+# Default language if you have a multi-language setup
+DefaultContentLanguage = "en"
 
 baseURL = "https://example.com"
 theme = "amperage"
@@ -186,7 +187,7 @@ Now you can use the `amp-ad` shortcode:
 
 Due to AMP requirements the comments need to be hosted in a domain different from the original. Amperage is ready to receive a URL to embed comments at the end of every post. This is to achieve a degree of agnosticy for the comment system.
 
-Remember that to resize the iframe containing the comment box you need to send a message to the amp sentinel with the new height. This applies to any case.
+Remember that to resize the iframe containing the comment box you need to send a message to the amp sentinel with the new height:
 
 ```
 window.requestAnimationFrame(() => {
@@ -198,7 +199,7 @@ window.requestAnimationFrame(() => {
 });
 ```
 
-If you want to integrate your own comment service Amperage will add the parameters `id` and `url` to the request so you can use them on the iframe, in case you need a unique id:
+If you want to integrate your own comment service Amperage will add the parameters `id` and `url` to the request so you can use them on the iframe, in case you need a unique id. An example for Disqus:
 
 ```
 var urlParams = new URLSearchParams(window.location.search);
@@ -213,4 +214,4 @@ What I personally recommend is to use a new Github Pages project and refer it fr
 
 ## Contributing to Amperage
 
-If you have a feature request or have found a bug feel free to open an new issue.
+If you have a feature request or have found a bug feel free to open a new issue.
