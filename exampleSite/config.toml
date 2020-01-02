@@ -1,4 +1,5 @@
-DefaultContentLanguage = "en" # Default language if you have a multi-language setup
+# Default language if you have a multi-language setup
+DefaultContentLanguage = "en"
 
 baseURL = "https://example.com"
 
@@ -6,7 +7,8 @@ theme = "amperage"
 
 pygmentsUseClasses = true
 
-paginate = 2 # Number of posts shown per page
+# Number of posts shown per page (dafault: 10)
+paginate = 2
 
 # Language sections
 [languages]
@@ -50,6 +52,12 @@ paginate = 2 # Number of posts shown per page
 
     # Google Analytics code
     # googleAnalytics = "UA-xxxxxxxxx-x"
+
+    # Adsense publisher code
+    # adsensePublisher = "ca-pub-123456789"
+
+    # Comments Iframe URL
+    # commentsEmbedUrl = "https://comments.example.com"
 
     # Social sites for metatags
     facebookSite = "example"
