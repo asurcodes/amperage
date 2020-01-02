@@ -129,7 +129,7 @@ To override the default logo add the svg markup on the partial `layouts/partials
 
 ## Customize styles
 
-To override default styles just create a file in `assets/custom.scss` on your project and it will be transpiled, minified and appended automatically. The default styles are only 5KB, that leaves you with 45KB of room to still be a valid AMP page.
+To override default styles just add the file `assets/custom.scss` to your project and it will be transpiled, minified and appended automatically. Default styles only weight 5KB (including code highlighting), that leaves you with 45KB to further customize the theme.
 
 ## Enable cross-domain service worker installation
 
