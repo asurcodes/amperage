@@ -32,7 +32,7 @@ paginate = 3
     identifier = "hugo"
     name = "What is this for?"
     url = "https://gohugo.io"
-    weight = 10
+    weight = 8
 [[menu.main]]
     identifier = "author"
     name = "Who made this?"
@@ -42,7 +42,7 @@ paginate = 3
     identifier = "github"
     name = "Show me the code!"
     url = "https://github.com/asurbernardo/amperage"
-    weight = 8
+    weight = 10
 
 # Enable only tags taxonomy
 [taxonomies]
