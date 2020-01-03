@@ -8,7 +8,7 @@ theme = "amperage"
 pygmentsUseClasses = true
 
 # Number of posts shown per page (dafault: 10)
-paginate = 2
+paginate = 3
 
 # Language sections
 [languages]
@@ -35,8 +35,13 @@ paginate = 2
     weight = 10
 [[menu.main]]
     identifier = "github"
-    name = "GitHub"
+    name = "Repository"
     url = "https://github.com/asurbernardo/amperage"
+    weight = 10
+[[menu.main]]
+    identifier = "author"
+    name = "Author"
+    url = "https://asur.dev"
     weight = 10
 
 # Enable only tags taxonomy
@@ -44,7 +49,7 @@ paginate = 2
     tag = "tags"
 
 [params]
-    copyright = "amperage" # Name shown on footer copyright
+    copyright = "Amperage" # Name shown on footer copyright
     themeColor = "#333" # Theme color displayed on mobile browsers
 
     # Default AMP components for the whole site
