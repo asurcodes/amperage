@@ -30,19 +30,19 @@ paginate = 3
 # Menu elements
 [[menu.main]]
     identifier = "hugo"
-    name = "Hugo"
+    name = "What is this for?"
     url = "https://gohugo.io"
     weight = 10
 [[menu.main]]
-    identifier = "github"
-    name = "Repository"
-    url = "https://github.com/asurbernardo/amperage"
-    weight = 10
-[[menu.main]]
     identifier = "author"
-    name = "Author"
+    name = "Who made this?"
     url = "https://asur.dev"
-    weight = 10
+    weight = 9
+[[menu.main]]
+    identifier = "github"
+    name = "Show me the code!"
+    url = "https://github.com/asurbernardo/amperage"
+    weight = 8
 
 # Enable only tags taxonomy
 [taxonomies]
