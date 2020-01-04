@@ -30,17 +30,17 @@ paginate = 3
 # Menu elements
 [[menu.main]]
     identifier = "hugo"
-    name = "What is this for?"
+    name = "GoHugo"
     url = "https://gohugo.io"
     weight = 8
 [[menu.main]]
     identifier = "author"
-    name = "Who made this?"
+    name = "The author"
     url = "https://asur.dev"
     weight = 9
 [[menu.main]]
     identifier = "github"
-    name = "Show me the code!"
+    name = "The code!"
     url = "https://github.com/asurbernardo/amperage"
     weight = 10
 
