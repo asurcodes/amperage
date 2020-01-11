@@ -1,16 +1,20 @@
-<figure class="figure">
-	<amp-img 
-	class="figure__image {{ with .class }}{{ . }}{{ end }}"
-	{{ with .alt }}alt="{{ range (split . " ") }}{{ . }} {{ end }}"{{ end }}
-	{{ with .attribution }}attribution="{{ range (split . " ") }}{{ . }} {{ end }}"{{ end }}
-	{{ with .srcset }}srcset="{{ range (split . " ") }}{{ . | absURL }} {{ end }}"{{ end }}
-	{{ with .tabindex }}tabindex="{{ . }}"{{ end }}
-	{{ with .onTap }}on="tap:{{- . -}}"{{ end }}
-	{{ with .role }}role="{{ . }}"{{ end }}
-	{{ with .width }}width="{{ . }}"{{ end }}
-	{{ with .height }}height="{{ . }}"{{ end }}
-	{{ with .layout }}layout="{{ . }}"{{ end }}
-	{{ with .media }}media="{{ . }}"{{ end }}
-	{{ with .src }}src="{{ . | absURL}}"{{ end }}></amp-img>
-	{{ with .caption }}<figcaption class="figure__caption">{{ . }}</figcaption>{{ end }}
+<figure class="figure {{ with .caption }}figure--with-caption{{ end }}">
+	{{ with .caption }}
+		<figcaption class="figure__caption">
+			{{ . }}
+		</figcaption>
+	{{ end }}
+	<amp-img
+		class="figure__image {{ with .class }}{{ . }}{{ end }} {{ with .caption }}figure__image--with-caption{{ end }}"
+		{{ with .alt }}alt="{{ range (split . " ") }}{{ . }} {{ end }}"{{ end }}
+		{{ with .attribution }}attribution="{{ range (split . " ") }}{{ . }} {{ end }}"{{ end }}
+		{{ with .srcset }}srcset="{{ range (split . " ") }}{{ . | absURL }} {{ end }}"{{ end }}
+		{{ with .tabindex }}tabindex="{{ . }}"{{ end }}
+		{{ with .onTap }}on="tap:{{- . -}}"{{ end }}
+		{{ with .role }}role="{{ . }}"{{ end }}
+		{{ with .width }}width="{{ . }}"{{ end }}
+		{{ with .height }}height="{{ . }}"{{ end }}
+		{{ with .layout }}layout="{{ . }}"{{ end }}
+		{{ with .media }}media="{{ . }}"{{ end }}
+		{{ with .src }}src="{{ . | absURL}}"{{ end }}></amp-img>
 </figure>

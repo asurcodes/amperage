@@ -5,7 +5,7 @@ body {
 	font-size: 1.2em;
 	font-family: Courier New;
 	line-height: 2;
-	color: #333;
+	color: black;
 }
 
 .header, .main, .footer {
@@ -127,17 +127,23 @@ blockquote {
 }
 
 .figure {
-	position: relative;
+	width: 100%;
+	&--with-caption {
+		display: flex;
+		border-top: 6px solid #333;
+	}
+	&__image {
+		&--with-caption {
+			min-width: 70%;
+		}
+	}
 	&__caption {
-		display: block;
-		position: absolute;
-		max-width: 60%;
-		bottom: 1rem;
-		left: -1rem;
-		padding: 0 1rem;
 		background-color: #333;
 		color: white;
 		font-weight: 700;
+		padding: .5em 1em;
+		height: min-content;
+		word-wrap: break-word;
 	}
 }
 
@@ -156,6 +162,39 @@ blockquote {
 	&__title {
 		font-weight: 700;
 		font-size: 1.5em;
+	}
+}
+
+.product {
+	width: max-content;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 1em;
+	&__image {
+		width: 100%;
+		max-height: 300px;
+		max-width: 300px;
+	}
+	&__content {
+		display:flex;
+		flex-direction: column;
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 1.5rem;
+	}
+	&__cta {
+		font-weight: 700;
+		font-size: 1.2em;
+		padding: .5em;
+		color: white;
+		background-color: #333;
+		border-bottom: unset;
+		position: absolute;
+		bottom: -1rem;
+		right: -1rem;
 	}
 }
 
@@ -206,7 +245,6 @@ blockquote {
 		}
 	}
 	.highlight {
-		overflow: auto;
 		.chroma {
 			background-color: #F1F1F1;
 		}
@@ -295,10 +333,14 @@ blockquote {
 		justify-content: space-between;
 	}
 	.figure {
-		position: relative;
+		flex-direction: column-reverse;
+		&--with-caption {
+			border-top: none;
+		}
 		&__caption {
 			position: relative;
 			max-width: 100%;
+
 		}
 	}
 }
