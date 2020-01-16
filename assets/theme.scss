@@ -197,6 +197,7 @@ blockquote {
 		border: 1px solid black;
 		box-shadow: 6px 7px 0 0 #333;
 		&:hover {
+			border: 1px solid black;
 			transform: translateY(-7px);
 		}
 	}
