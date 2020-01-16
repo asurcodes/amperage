@@ -1,6 +1,6 @@
 <div class="post-it {{ with .Params.type }} post-it--{{ . }} {{ else }} post-it--tip {{ end }}">
 	{{ with .Params.title }} <div class="post-it__title">{{.}}</div>{{ end }}
 	<div class="post-it__content">
-		{{.Inner}}
+		{{.Inner | markdownify}}
 	</div>
 </div>
