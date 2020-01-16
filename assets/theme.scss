@@ -154,10 +154,10 @@ blockquote {
 		background-color: lemonchiffon;
 	}
 	&--info {
-		background-color: lightskyblue;
+		background-color: azure;
 	}
 	&--danger {
-		background-color: lightcoral;
+		background-color: #ffcccb;
 	}
 	&__title {
 		font-weight: 700;
@@ -166,18 +166,19 @@ blockquote {
 }
 
 .product {
-	width: max-content;
-	position: relative;
+	width: 100%;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	padding: 1em;
+	justify-content: space-between;
+	padding: 1.5em;
+	border: 1px solid #333;
 	&__image {
+		margin: auto;
 		width: 100%;
-		max-height: 300px;
-		max-width: 300px;
+		min-width: 300px;
+		max-width: 400px;
 	}
 	&__content {
+		margin-left: 2em;
 		display:flex;
 		flex-direction: column;
 	}
@@ -185,16 +186,19 @@ blockquote {
 		font-weight: 700;
 		font-size: 1.5rem;
 	}
+	&__description {
+		margin-top: 1em;
+	}
 	&__cta {
-		font-weight: 700;
-		font-size: 1.2em;
+		margin-top: 1em;
 		padding: .5em;
-		color: white;
-		background-color: #333;
-		border-bottom: unset;
-		position: absolute;
-		bottom: -1rem;
-		right: -1rem;
+		font-size: 1.2em;
+		text-align: center;
+		border: 1px solid black;
+		box-shadow: 6px 7px 0 0 #333;
+		&:hover {
+			transform: translateY(-7px);
+		}
 	}
 }
 
@@ -341,6 +345,16 @@ blockquote {
 			position: relative;
 			max-width: 100%;
 
+		}
+	}
+	.product {
+		flex-wrap: wrap;
+		&__content {
+			margin-left: unset;
+			text-align: center;
+		}
+		&__title {
+			margin-top: 1em;
 		}
 	}
 }
