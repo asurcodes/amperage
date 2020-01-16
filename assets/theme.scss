@@ -22,6 +22,7 @@ body {
 		justify-content: flex-start;
 		border: 1px solid #333;
 		a {
+			white-space: nowrap;
 			border-bottom: none;
 			&:hover {
 				color: $main-color;
