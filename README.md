@@ -91,11 +91,11 @@ paginate = 2
     tag = "tags"
 
 [params]
-    copyright = "amperage" # Name shown on footer copyright
+    copyright = "Amperage" # Name shown on footer copyright
     themeColor = "#333" # Theme color displayed on mobile browsers
 
     # Default AMP components for the whole site
-    ampElements = ["amp-analytics", "amp-social-share", "amp-install-serviceworker"]
+    ampElements = ["amp-analytics", "amp-social-share", "amp-install-serviceworker", "amp-iframe"]
 
     # Google Analytics code
     googleAnalytics = "UA-128498798-1"
