@@ -3,12 +3,13 @@ name = "Amperage"
 license = "MIT"
 licenselink = "https://github.com/asurbernardo/amperage/blob/master/LICENSE"
 
-description = "SEO optimized theme with native AMP, structured data, service workers and i18n out of the box!"
+description = "Blazing fast SEO optimized theme with native AMP, structured data, service workers and i18n out of the box!"
 
 homepage = "https://github.com/asurbernardo/amperage"
 
 tags = ["blog", "personal", "responsive", 'minimal', 'clean', "simple", "google analytics", "light",
-    "multilingual", "syntax highlighting", "fast", "customizable", "minimalistic", "technical", "amp"]
+    "multilingual", "syntax highlighting", "fast", "customizable", "minimalistic", "technical", "amp",
+    "white", "disqus", "starter"]
 
 features = ["amp", "seo", "pwa", "structured data", "toc", "related content", "service-worker", "shortcodes",
     "syntax highlighting", "tags", "social share"]
