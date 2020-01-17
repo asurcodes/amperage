@@ -54,15 +54,9 @@ body {
 .main {
 	min-height: 80vh;
 	.pagination {
-		margin: 2em auto;
+		margin: 3em auto 2em auto;
 		display: flex;
 		justify-content: space-between;
-		a {
-			border-bottom: none;
-			&:hover {
-				color: $main-color;
-			}
-		}
 	}
 }
 
@@ -92,10 +86,24 @@ h4 {
 a {
 	color: inherit;
 	text-decoration:none;
-	border-bottom: 2px dashed #37474f;
 	transition: background 0.3s;
+	border-bottom: 2px dashed #37474f;
 	&:hover {
 		border-color: $main-color;
+	}
+}
+
+.button {
+	padding: .5em 1em;
+	font-size: 1.2em;
+	text-align: center;
+	border: 1px solid black;
+	box-shadow: 7px 7px 0 0 #333;
+	&:hover {
+		color: $main-color;
+		border: 1px solid black;
+		transform: translate(4px, 4px);
+		box-shadow: 3px 3px 0 0 #333;
 	}
 }
 
@@ -192,15 +200,6 @@ blockquote {
 	}
 	&__cta {
 		margin-top: 1em;
-		padding: .5em;
-		font-size: 1.2em;
-		text-align: center;
-		border: 1px solid black;
-		box-shadow: 6px 7px 0 0 #333;
-		&:hover {
-			border: 1px solid black;
-			transform: translateY(-7px);
-		}
 	}
 }
 
