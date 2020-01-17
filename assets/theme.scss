@@ -94,7 +94,7 @@ a {
 }
 
 .button {
-	padding: .5em 1em;
+	padding: .5em .75em;
 	font-size: 1.2em;
 	text-align: center;
 	border: 1px solid black;
@@ -211,8 +211,7 @@ blockquote {
 	}
 }
 
-.content,
-.summary {
+.content {
 	width: 100%;
 	& > * {
 		margin-top: 1.5em;
@@ -293,6 +292,34 @@ blockquote {
 	}
 }
 
+.summary {
+	&:not(:first-child) {
+		margin-top: 5em;
+	}
+	& > * {
+		margin-top: 1em;
+	}
+	&__container {
+		position: relative;
+		width: 100%;
+		margin-bottom: 5em;
+	}
+	&__title {
+		position: absolute;
+		bottom: -2em;
+		margin: .5em;
+		padding: .5em;
+		z-index: 1;
+		background-color: white;
+		border: 1px solid #333;
+		text-align: center;
+	}
+	.button {
+		display: block;
+		margin: inherit 1em;
+	}
+}
+
 @media (max-width: 1200px) {
 	body {
 		grid-gap: 0;
@@ -304,7 +331,7 @@ blockquote {
 	}
 	.main,
 	.footer {
-		margin: .5em 0.75em 0 .5em;
+		margin: 1em 0.75em 0 .5em;
 	}
 	.header {
 		margin: 0;
@@ -328,6 +355,25 @@ blockquote {
 	.post-it {
 		margin-left: 0;
 		margin-right: 0;
+	}
+	.summary {
+		margin-top: unset;
+		&:not(:first-child) {
+			margin-top: 3em;
+		}
+		&__container {
+			position: relative;
+			margin-bottom: unset;
+		}
+		&__title {
+			margin: unset;
+			padding: unset;
+			position: unset;
+			border: none;
+		}
+		&__image {
+			margin-top: 1em;
+		}
 	}
 }
 

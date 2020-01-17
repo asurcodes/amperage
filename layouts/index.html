@@ -1,9 +1,6 @@
 {{ define "main" }}
 	{{ range .Paginator.Pages }}
-		<article class="summary">
-			<h2><a href="{{.Permalink}}" data-rel="prefetch">{{.Title}}</a></h2>
-			<p>{{.Summary}}</p>
-		</article>
+		{{- partial "post/summary.html" . -}}
 	{{ end }}
 	{{- partial "page/pagination.html" . -}}
 {{ end }}

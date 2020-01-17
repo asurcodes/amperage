@@ -1,0 +1,12 @@
+<article class="summary">
+    <div class="summary__container">
+        <h2 class="summary__title">{{.Title}}</h2>
+        <amp-img class="summary__image"
+            src="{{.Params.Image.Src}}"
+            layout="responsive"
+            width="1280"
+            height="720"></amp-img>
+    </div>
+    <p>{{.Summary}}</p>
+    <a class="button" role="button" href="{{.Permalink}}" data-rel="prefetch">Seguir leyendo...</a>
+</article>
