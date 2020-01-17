@@ -301,7 +301,6 @@ blockquote {
 	}
 	&__container {
 		position: relative;
-		width: 100%;
 		margin-bottom: 5em;
 	}
 	&__title {
@@ -310,6 +309,7 @@ blockquote {
 		margin: .5em;
 		padding: .5em;
 		z-index: 1;
+		width: 100%;
 		background-color: white;
 		border: 1px solid #333;
 		text-align: center;
