@@ -36,3 +36,5 @@ other = "Next"
 other = "Previous"
 [noAd]
 other = "No ad for you!"
+[keepReading]
+other = "Keep reading..."
