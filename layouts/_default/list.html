@@ -3,10 +3,7 @@
 		{{.Content}}
 	</article>
 	{{ range .Paginator.Pages }}
-		<article class="summary">
-			<h2 class="summary__title"><a href="{{.Permalink}}" data-rel="prefetch">{{.Title}}</a></h2>
-			<p class="summary__content">{{.Summary}}</p>
-		</article>
+		{{- partial "post/summary.html" . -}}
 	{{ end }}
 	{{- partial "page/pagination.html" . -}}
 {{ end }}
