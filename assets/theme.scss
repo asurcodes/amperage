@@ -168,6 +168,9 @@ blockquote {
 	&--danger {
 		background-color: #ffcccb;
 	}
+	&--success {
+		background-color: #d0f0c0;
+	}
 	&__title {
 		font-weight: 700;
 		font-size: 1.5em;
