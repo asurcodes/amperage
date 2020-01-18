@@ -3,8 +3,8 @@
         {{ $url := trim .URL "/" | absURL }}
         <li>
             <a href="{{ $url }}"
-                {{ with .Identifier }} target="_blank" rel="nofollow noopener noreferrer"
-                {{else}} data-rel="prefetch" {{ end }}>
+                {{ with .Page }}  data-rel="prefetch"
+                {{else}} target="_blank" rel="nofollow noopener noreferrer" {{ end }}>
                 {{ .Pre }}<span>{{ .Name }}</span>
             </a>
         </li>
