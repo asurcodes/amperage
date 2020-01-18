@@ -4,7 +4,7 @@ body {
 	grid-gap: 1em 1em;
 	font-size: 1.2em;
 	font-family: Courier New;
-	line-height: 2;
+	line-height: 1.6;
 	color: black;
 }
 
@@ -22,6 +22,7 @@ body {
 		justify-content: flex-start;
 		border: 1px solid #333;
 		a {
+			font-size: 1.2em;
 			white-space: nowrap;
 			border-bottom: none;
 			&:hover {
@@ -66,12 +67,8 @@ body {
 	flex-wrap: wrap;
 }
 
-h1, h2, h3, h4 {
-	font-family: Helvetica;
-	line-height: 1.5;
-}
 h1 {
-	font-size: 4rem;
+	font-size: 3.5rem;
 }
 h2 {
 	font-size: 2.5rem;
@@ -296,25 +293,16 @@ blockquote {
 }
 
 .summary {
-	&:not(:first-child) {
-		margin-top: 5em;
+	&:not(:first-of-type) {
+		h2 {
+			margin-top: 2.5em;
+		}
 	}
 	& > * {
-		margin-top: 1em;
+		margin-top: 1.25em;
 	}
-	&__container {
-		position: relative;
-		width: 100%;
-		margin-bottom: 5em;
-	}
+
 	&__title {
-		position: absolute;
-		bottom: -2em;
-		margin: .5em;
-		padding: .5em;
-		z-index: 1;
-		background-color: white;
-		border: 1px solid #333;
 		text-align: center;
 	}
 	.button {
@@ -358,25 +346,6 @@ blockquote {
 	.post-it {
 		margin-left: 0;
 		margin-right: 0;
-	}
-	.summary {
-		margin-top: unset;
-		&:not(:first-child) {
-			margin-top: 3em;
-		}
-		&__container {
-			position: relative;
-			margin-bottom: unset;
-		}
-		&__title {
-			margin: unset;
-			padding: unset;
-			position: unset;
-			border: none;
-		}
-		&__image {
-			margin-top: 1em;
-		}
 	}
 }
 

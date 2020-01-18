@@ -1,13 +1,13 @@
 <article class="summary">
-    <div class="summary__container">
-        <h2 class="summary__title">{{.Title}}</h2>
+    <h2 class="summary__title">{{.Title}}</h2>
+    {{ with .Params.Image.Src }}
         <amp-img class="summary__image"
-            src="{{.Params.Image.Src}}"
+            src="{{ . }}"
             layout="responsive"
             width="1280"
             height="720"
-            alt="{{.Title}}"></amp-img>
-    </div>
+            alt="{{ $.Title }}"></amp-img>
+    {{ end }}
     <p>{{.Summary}}</p>
     <a class="button" role="button"
         href="{{.Permalink}}"
