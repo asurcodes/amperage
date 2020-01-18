@@ -5,8 +5,12 @@
             src="{{.Params.Image.Src}}"
             layout="responsive"
             width="1280"
-            height="720"></amp-img>
+            height="720"
+            alt="{{.Title}}"></amp-img>
     </div>
     <p>{{.Summary}}</p>
-    <a class="button" role="button" href="{{.Permalink}}" data-rel="prefetch">{{ i18n "keepReading" }}</a>
+    <a class="button" role="button"
+        href="{{.Permalink}}"
+        data-rel="prefetch"
+        aria-label="{{ i18n "keepReading" }} {{.Title}}">{{ i18n "keepReading" }}</a>
 </article>
