@@ -53,7 +53,7 @@ paginate = 3
     themeColor = "#333" # Theme color displayed on mobile browsers
 
     # Default AMP components for the whole site
-    ampElements = ["amp-analytics", "amp-social-share", "amp-install-serviceworker"]
+    ampElements = ["amp-iframe", "amp-analytics", "amp-social-share", "amp-install-serviceworker"]
 
     # Google Analytics code
     # googleAnalytics = "UA-xxxxxxxxx-x"

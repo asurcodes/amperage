@@ -18,10 +18,7 @@ keywords = ['amperage', 'prueba', 'artículo']
 
 [author]
     name = "Asur"
-    homepage = "/"
-
-[image]
-    src = "/images/share-banner.png"
+    homepage = "https://asur.dev"
 
 [twitter]
     site = "@example"
@@ -36,7 +33,7 @@ keywords = ['amperage', 'prueba', 'artículo']
 
 {{% under-title %}}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, mauris sed tincidunt dignissim, enim justo suscipit dui, vitae pharetra justo nulla at neque. Ut eu nulla in nisi dapibus efficitur. Donec sollicitudin ac arcu ac malesuada. Cras sapien orci, malesuada id ultrices ac, sodales sed est. Integer orci diam, hendrerit sed tellus id, tempor semper enim. Donec enim nunc, rhoncus in tincidunt sed, dictum non risus. Proin scelerisque sit amet nulla a laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut fermentum justo. Duis viverra a dolor nec egestas. Fusce cursus vel nunc eu imperdiet. Nullam luctus felis magna, at feugiat dui ultrices nec. Etiam rutrum odio tellus, at molestie dui condimentum id. Maecenas feugiat dui consectetur ex pellentesque venenatis. In diam urna, hendrerit vitae est eu, laoreet rhoncus lectus. Nullam lorem tortor, commodo a purus dictum, vulputate pretium nisi. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, mauris sed tincidunt dignissim, enim justo suscipit dui, vitae pharetra justo nulla at neque. Ut eu nulla in nisi dapibus efficitur. Donec sollicitudin ac arcu ac malesuada. Cras sapien orci, malesuada id ultrices ac, sodales sed est. Integer orci diam, hendrerit sed tellus id, tempor semper enim. Donec enim nunc, rhoncus in tincidunt sed, dictum non risus. Proin scelerisque sit amet nulla a laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut fermentum justo. Duis viverra a dolor nec egestas. Fusce cursus vel nunc eu imperdiet. Nullam luctus felis magna, at feugiat dui ultrices nec. Etiam rutrum odio tellus, at molestie dui condimentum id. Maecenas feugiat dui consectetur ex pellentesque venenatis. In diam urna, hendrerit vitae est eu, laoreet rhoncus lectus. Nullam lorem tortor, commodo a purus dictum, vulputate pretium nisi.
 
 {{% toc %}}
 

@@ -15,10 +15,7 @@ keywords = ['hugo', 'emoji', 'example']
 
 [author]
     name = "Asur"
-    homepage = "https://asur.dev"
-
-[image]
-    src = "/images/share-banner.png"
+    homepage = "/"
 
 [twitter]
     site = "@asurbernardo"
