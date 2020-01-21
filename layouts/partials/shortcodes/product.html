@@ -7,9 +7,11 @@
     <div class="product__content">
         <p class="product__title">{{ .title }}</p>
         <p class="product__description">{{ .description }}</p>
-        <a class="product__cta button"
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            href="{{ .link | absURL }}" role="button">{{ .cta }}</a>
+        {{ with .cta }}
+            <a class="product__cta button"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                href="{{ $.link | absURL }}" role="button">{{ . }}</a>
+        {{ end }}
     </div>
 </div>
