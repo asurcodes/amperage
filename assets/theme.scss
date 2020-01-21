@@ -183,11 +183,12 @@ blockquote {
 	&__image {
 		margin: auto;
 		width: 100%;
-		min-width: 300px;
+		min-width: 250px;
 		max-width: 400px;
 	}
 	&__content {
 		margin-left: 2em;
+		align-self: center;
 		display:flex;
 		flex-direction: column;
 	}
