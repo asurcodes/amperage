@@ -53,6 +53,7 @@ body {
 }
 
 .main {
+	min-width: 0;
 	min-height: 80vh;
 	.pagination {
 		margin: 3em auto 2em auto;
@@ -155,6 +156,7 @@ blockquote {
 
 .post-it {
 	width: 100%;
+	max-width: 100%;
 	padding: 1.5em;
 	&--tip {
 		background-color: lemonchiffon;
