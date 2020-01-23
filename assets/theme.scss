@@ -135,6 +135,7 @@ blockquote {
 
 .figure {
 	width: 100%;
+	max-width: 100%;
 	&--with-caption {
 		display: flex;
 		border-top: 6px solid #333;
@@ -216,6 +217,7 @@ blockquote {
 
 .content {
 	width: 100%;
+	max-width: 100%;
 	& > * {
 		margin-top: 1.5em;
 	}
