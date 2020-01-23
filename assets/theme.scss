@@ -206,6 +206,17 @@ blockquote {
 	}
 }
 
+.social-share {
+	display: flex;
+	align-self: center;
+	align-items: center;
+	&__button {
+		margin: 0 .5em;
+		border-radius: 50%;
+		background-size: 60%;
+	}
+}
+
 #tags {
 	margin: 0;
 	padding: 0;
@@ -260,20 +271,10 @@ blockquote {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		line-height: 1.5;
 		font-size: 1rem;
 		&__info,
 		&__social-share {
 			align-self: center;
-		}
-		&__social-share {
-			display: flex;
-			align-items: center;
-			&__button {
-				margin: 0 .5em;
-				border-radius: 50%;
-				background-size: 60%;
-			}
 		}
 	}
 	.ad {
@@ -291,6 +292,29 @@ blockquote {
 			p {
 				margin:auto;
 			}
+		}
+	}
+	.author {
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: #F1F1F1;
+		padding: 1.5rem;
+		& > *:not(:first-child) {
+			margin-top: 1rem;
+		}
+		&__name {
+			font-weight: 700;
+			font-size: 1.5em;
+		}
+		&__image {
+			border-radius: 100px;
+		}
+		&__bio {
+			text-align: center;
+		}
+		&__cta {
+			font-size: 1.25em;
 		}
 	}
 }

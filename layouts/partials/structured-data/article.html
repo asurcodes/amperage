@@ -21,12 +21,16 @@
     "author": {
       "@type": "Person",
       "name": "{{ .Page.Params.Author.Name }}",
-      "url": "{{ .Page.Params.Author.Homepage | absURL }}"
+      "url": "{{ .Page.Params.Author.Homepage | absURL }}",
+      "image": "{{ .Page.Params.Author.Image | absURL }}",
+      "description": "{{ .Page.Params.Author.Bio }}"
     },
     "creator": {
       "@type": "Person",
       "name": "{{ .Page.Params.Author.Name }}",
-      "url": "{{ .Page.Params.Author.Homepage | absURL }}"
+      "url": "{{ .Page.Params.Author.Homepage | absURL }}",
+      "image": "{{ .Page.Params.Author.Image | absURL }}",
+      "description": "{{ .Page.Params.Author.Bio }}"
     },
     "publisher": {
       "@type": "Organization",
