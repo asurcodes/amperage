@@ -23,7 +23,7 @@ Lighthouse v5 theme results:
 
 ![Lighthouse results](https://raw.githubusercontent.com/asurbernardo/amperage/master/images/lighthouse-results.png)
 
-## Installation
+## ❯ Installation
 
 You can use the `exampleSite` provided to bootstrap your new project:
 
@@ -40,11 +40,11 @@ cd new-site
 hugo serve
 ```
 
-## Kitchen sink
+## ❯ Kitchen sink
 
 You can check out all the components of this theme [here](https://asur.dev/en/amperage/theme-kitchen-sink) and a fully functional website using this theme [here](https://github.com/asurbernardo/blog).
 
-## Configuration
+## ❯ Configuration
 
 ```toml
 # Default language if you have a multi-language setup
@@ -123,15 +123,15 @@ paginate = 2
     publisherLogoHeight = 60
 ```
 
-## Customize logo
+## ❯ Customize logo
 
 To override the default logo add the svg markup on the partial `layouts/partials/header/logo.html`.
 
-## Customize styles
+## ❯ Customize styles
 
 To override default styles just add the file `assets/custom.scss` to your project and it will be transpiled, minified and appended automatically. Default styles only weight 5KB (including code highlighting), that leaves you with 45KB to further customize the theme.
 
-## Enable cross-domain service worker installation
+## ❯ Enable cross-domain service worker installation
 
 To enable cross-domain service worker you need to override the file `static/install-sw.html`:
 
@@ -143,7 +143,7 @@ To enable cross-domain service worker you need to override the file `static/inst
 </amp-install-serviceworker>
 ```
 
-## Menu links
+## ❯ Menu links
 
 On the menu you can set internal and external links. To set external links you can use the `config.toml` file:
 
@@ -170,7 +170,7 @@ If you want to display a page from your own site on the menu you need to add to 
 
 This distinction is important because the service worker needs to identify the internal URLs so it can eager load them.
 
-## Display ads
+## ❯ Display ads
 
 To enable ads you need to have an approved Adsense publisher code. Once you get one set it in the `config.toml`:
 
@@ -188,7 +188,7 @@ Now you can use the `amp-ad` shortcode:
     slot="123456789" >}}
 ```
 
-## Comments
+## ❯ Comments
 
 Due to AMP requirements the comments need to be hosted in a domain different from the original. Amperage is ready to receive a URL to embed comments at the end of every post. This is to achieve a degree of agnosticy for the comment system.
 
@@ -217,6 +217,6 @@ var disqus_config = function () {
 
 What I personally recommend is to use a new Github Pages project and refer it from your main site. Here you can see a [fully functional example using Disqus](https://github.com/asurbernardo/blog-comments).
 
-## Contributing to Amperage
+## ❯ Contributing to Amperage
 
 If you have a feature request or have found a bug feel free to open a new issue.
