@@ -1,9 +1,10 @@
+
 <ul class="header__menu__list">
     {{ range .Site.Menus.main }}
         {{ $url := trim .URL "/" | absURL }}
         <li>
             <a href="{{ $url }}"
-                {{ with .Page }}  data-rel="prefetch"
+                {{ with or (.Page) (hasPrefix $url $.Site.BaseURL) }} data-rel="prefetch"
                 {{else}} target="_blank" rel="nofollow noopener noreferrer" {{ end }}>
                 {{ .Pre }}<span>{{ .Name }}</span>
             </a>
