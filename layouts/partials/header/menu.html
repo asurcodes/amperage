@@ -3,6 +3,8 @@
     {{ $baseUrl := trim .Site.BaseURL "/" }}
     {{ range .Site.Menus.main }}
         {{ $url := trim .URL "/" | absURL }}
+        {{ $baseUrl}}
+        {{ $url }}
         <li>
             <a href="{{ $url }}"
                 {{ with or (.Page) (in $url $baseUrl) }} data-rel="prefetch"
