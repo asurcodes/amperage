@@ -3,9 +3,12 @@
     {{ $baseUrl := trim .Site.BaseURL "/" }}
     {{ range .Site.Menus.main }}
         {{ $url := trim .URL "/" | absURL }}
+        {{ $url }}
+        {{ $baseUrl }}
+        {{ in $url $baseUrl }}
         <li>
             <a href="{{ $url }}"
-                {{ if in $url $baseUrl }} data-rel="prefetch"
+                {{ if or (.Page) (in $url $baseUrl) }} data-rel="prefetch"
                 {{else}} target="_blank" rel="nofollow noopener noreferrer" {{ end }}>
                 {{ .Pre }}<span>{{ .Name }}</span>
             </a>
