@@ -15,7 +15,7 @@
                 {{ (.Resize "320x").Permalink }} 320w"
             width={{ with $.width }} "{{ . }}" {{ else }} {{ $resource.Width }} {{ end }}
             height={{ with $.height }} "{{ . }}" {{ else }} {{ $resource.Height }} {{ end }}
-            {{ with $.layout }}layout="{{ . }}"{{ end }}
+            layout={{ with $.layout }}"{{ . }}"{{else}}"responsive"{{ end }}
             {{ with $.alt }}alt="{{ . }}"{{ end }}
             class="figure__image {{ with $.class }}{{ . }}{{ end }} {{ with $.caption }}figure__image--with-caption{{ end }}">
         </amp-img>
