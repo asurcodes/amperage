@@ -1,12 +1,7 @@
 <article class="summary">
     <h2 class="summary__title">{{.Title}}</h2>
     {{ with .Params.Image.Src }}
-        <amp-img class="summary__image"
-            src="{{ . }}"
-            layout="responsive"
-            width="1280"
-            height="720"
-            alt="{{ $.Title }}"></amp-img>
+        {{- partial "blocks/image.html" (dict "src" . "alt" $.Title "class" "summary__image") -}}
     {{ end }}
     <p>{{.Summary}}</p>
     <a class="button" role="button"
