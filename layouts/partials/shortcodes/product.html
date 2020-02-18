@@ -1,9 +1,12 @@
 <div class="product">
-    <amp-img
-        class="product__image"
-        layout="responsive" width="300" height="300"
-        alt="{{ .title }}"
-        src="{{ .image | absURL}}"></amp-img>
+    {{ $resource := resources.Get .src }}
+    {{ with $resource }}
+        <amp-img
+            class="product__image"
+            layout="responsive" width="300" height="300"
+            alt="{{ .title }}"
+            src="{{ .Permalink | absURL }}"></amp-img>
+    {{ end }}
     <div class="product__content">
         <p class="product__title">{{ .title }}</p>
         <p class="product__description">{{ .description }}</p>
