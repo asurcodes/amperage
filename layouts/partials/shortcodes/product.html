@@ -6,6 +6,12 @@
             layout="responsive" width="300" height="300"
             alt="{{ $.title }}"
             src="{{ .Permalink | absURL }}"></amp-img>
+    {{ else }}
+        <amp-img
+            class="product__image"
+            layout="responsive" width="300" height="300"
+            alt="{{ $.title }}"
+            src="{{ $.image | absURL }}"></amp-img>
     {{ end }}
     <div class="product__content">
         <p class="product__title">{{ .title }}</p>
