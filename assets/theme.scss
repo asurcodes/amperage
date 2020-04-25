@@ -1,9 +1,10 @@
 body {
+	max-width: 100%;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-gap: 1em 1em;
 	font-size: 1.2em;
-	font-family: Courier New;
+	font-family: Courier New, sans-serif;
 	line-height: 1.6;
 	color: black;
 }

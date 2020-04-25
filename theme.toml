@@ -14,7 +14,7 @@ tags = ["blog", "personal", "responsive", 'minimal', 'clean', "simple", "google 
 features = ["amp", "seo", "pwa", "structured data", "toc", "related content", "service-worker", "shortcodes",
     "syntax highlighting", "tags", "social share"]
 
-min_version = "0.59.0"
+min_version = "0.60.0"
 
 [author]
     name = "Asur Bernardo"

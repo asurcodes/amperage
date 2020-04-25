@@ -1,0 +1,36 @@
+<figure class="figure {{ with .caption }}figure--with-caption{{ end }}">
+    {{ with .caption }}
+        <figcaption class="figure__caption">
+            {{ . }}
+        </figcaption>
+    {{ end }}
+    {{ $resource := resources.Get .src }}
+    {{ with $resource }}
+        {{ if and (eq .ResourceType "image") (ne .MediaType.SubType "svg") }}
+            <amp-img
+                src="{{ .Permalink | absURL }}"
+                srcset="
+                    {{ (.Resize "1200x").Permalink }} 1200w,
+                    {{ (.Resize "800x").Permalink }} 800w,
+                    {{ (.Resize "640x").Permalink }} 640w,
+                    {{ (.Resize "480x").Permalink }} 480w,
+                    {{ (.Resize "320x").Permalink }} 320w
+                "
+                width={{ with $.width }} "{{ . }}" {{ else }} {{ .Width }} {{ end }}
+                height={{ with $.height }} "{{ . }}" {{ else }} {{ .Height }} {{ end }}
+                layout={{ with $.layout }}"{{ . }}"{{else}}"responsive"{{ end }}
+                {{ with $.alt }}alt="{{ . }}"{{ end }}
+                class="figure__image {{ with $.class }}{{ . }}{{ end }} {{ with $.caption }}figure__image--with-caption{{ end }}">
+            </amp-img>
+        {{ else }}
+            <amp-img
+                src="{{ .Permalink | absURL }}"
+                width={{ with $.width }} "{{ . }}" {{ else }} {{ .Width }} {{ end }}
+                height={{ with $.height }} "{{ . }}" {{ else }} {{ .Height }} {{ end }}
+                layout={{ with $.layout }}"{{ . }}"{{else}}"responsive"{{ end }}
+                {{ with $.alt }}alt="{{ . }}"{{ end }}
+                class="figure__image {{ with $.class }}{{ . }}{{ end }} {{ with $.caption }}figure__image--with-caption{{ end }}">
+            </amp-img>
+        {{ end }}
+    {{ end }}
+</figure>
