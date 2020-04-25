@@ -1,5 +1,4 @@
 <figure class="figure {{ with .caption }}figure--with-caption{{ end }}">
-
     {{ with .caption }}
         <figcaption class="figure__caption">
             {{ . }}
@@ -7,7 +6,7 @@
     {{ end }}
     {{ $resource := resources.Get .src }}
     {{ with $resource }}
-        {{ if eq .MediaType "image/jpeg"}}
+        {{ if and (eq .ResourceType "image") (ne .MediaType.SubType "svg") }}
             <amp-img
                 src="{{ .Permalink | absURL }}"
                 srcset="{{ (.Resize "1200x").Permalink }} 1200w,
