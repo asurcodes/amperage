@@ -1,11 +1,7 @@
 <div class="product">
     {{ $resource := resources.Get .image }}
     {{ with $resource }}
-        <amp-img
-            class="product__image"
-            layout="responsive" width="300" height="300"
-            alt="{{ $.title }}"
-            src="{{ .Permalink | absURL }}"></amp-img>
+        {{ partial "blocks/image.html" (dict "src" $.image "alt" $.title "width" 300 "height" 300 "class" "product__image") }}
     {{ else }}
         <amp-img
             class="product__image"

@@ -13,7 +13,8 @@
                     {{ (.Resize "900x").Permalink }} 900w,
                     {{ (.Resize "640x").Permalink }} 640w,
                     {{ (.Resize "480x").Permalink }} 480w,
-                    {{ (.Resize "320x").Permalink }} 320w"
+                    {{ (.Resize "320x").Permalink }} 320w
+                "
                 width={{ with $.width }} "{{ . }}" {{ else }} {{ .Width }} {{ end }}
                 height={{ with $.height }} "{{ . }}" {{ else }} {{ .Height }} {{ end }}
                 layout={{ with $.layout }}"{{ . }}"{{else}}"responsive"{{ end }}
