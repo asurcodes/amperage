@@ -1,5 +1,4 @@
 <figure class="figure {{ with .caption }}figure--with-caption{{ end }}">
-
     {{ with .caption }}
         <figcaption class="figure__caption">
             {{ . }}
@@ -7,11 +6,11 @@
     {{ end }}
     {{ $resource := resources.Get .src }}
     {{ with $resource }}
-        {{ if eq .MediaType "image/jpeg"}}
+        {{ if in (slice "jpeg" "jpg" "png" "gif") $resource.MediaType.SubType }}
             <amp-img
                 src="{{ .Permalink | absURL }}"
                 srcset="{{ (.Resize "1200x").Permalink }} 1200w,
-                    {{ (.Resize "800x").Permalink }} 800w,
+                    {{ (.Resize "900x").Permalink }} 900w,
                     {{ (.Resize "640x").Permalink }} 640w,
                     {{ (.Resize "480x").Permalink }} 480w,
                     {{ (.Resize "320x").Permalink }} 320w"
@@ -22,6 +21,7 @@
                 class="figure__image {{ with $.class }}{{ . }}{{ end }} {{ with $.caption }}figure__image--with-caption{{ end }}">
             </amp-img>
         {{ else }}
+                    FOO
             <amp-img
                 src="{{ .Permalink | absURL }}"
                 width={{ with $.width }} "{{ . }}" {{ else }} {{ .Width }} {{ end }}
