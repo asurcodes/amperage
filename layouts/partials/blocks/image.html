@@ -22,7 +22,6 @@
                 class="figure__image {{ with $.class }}{{ . }}{{ end }} {{ with $.caption }}figure__image--with-caption{{ end }}">
             </amp-img>
         {{ else }}
-                    FOO
             <amp-img
                 src="{{ .Permalink | absURL }}"
                 width={{ with $.width }} "{{ . }}" {{ else }} {{ .Width }} {{ end }}
