@@ -3,7 +3,7 @@ other = "Home"
 [notFound]
 other = "Page not found"
 [search]
-other = "Search"
+other = "Search for a post"
 [goBackHome]
 other = "Go back to the homepage"
 [by]

@@ -56,6 +56,31 @@ body {
 .main {
 	min-width: 0;
 	min-height: 80vh;
+	.search {
+		font-family: Courier New, sans-serif;
+		color: black;
+		width: 100%;
+		margin: 0 auto 0 auto;
+		&__input {
+			padding: .5em 1em;
+			font-family: Courier New, sans-serif;
+			font-size: 1.2em;
+			width: 100%;
+			border-radius: 0;
+			border: 1px solid black;
+
+		}
+		.search-item {
+			&__link {
+				border-bottom: none;
+			}
+		}
+		.i-amphtml-autocomplete-results {
+			width: 100%;
+			border-radius: 0;
+			margin-left: 0;
+		}
+	}
 	.pagination {
 		margin: 3em auto 2em auto;
 		display: flex;

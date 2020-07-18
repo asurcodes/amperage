@@ -3,7 +3,7 @@ other = "Inicio"
 [notFound]
 other = "Página no encontrada"
 [search]
-other = "Buscar"
+other = "Buscar un artículo"
 [goBackHome]
 other = "Volver a la página de inicio"
 [by]
