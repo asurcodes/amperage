@@ -1,5 +1,4 @@
 {{ define "main" }}
-	{{- partial "page/search.html" . -}}
 	{{ range .Paginator.Pages }}
 		{{- partial "post/summary.html" . -}}
 	{{ end }}

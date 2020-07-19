@@ -51,12 +51,7 @@ body {
 			}
 		}
 	}
-}
-
-.main {
-	min-width: 0;
-	min-height: 80vh;
-	.search {
+	&__search {
 		font-family: Courier New, sans-serif;
 		color: black;
 		width: 100%;
@@ -68,7 +63,10 @@ body {
 			width: 100%;
 			border-radius: 0;
 			border: 1px solid black;
-
+			border-top: none;
+			&:focus {
+				outline: none;
+			}
 		}
 		.search-item {
 			&__link {
@@ -76,6 +74,11 @@ body {
 			}
 		}
 	}
+}
+
+.main {
+	min-width: 0;
+	min-height: 80vh;
 	.pagination {
 		margin: 3em auto 2em auto;
 		display: flex;
@@ -382,6 +385,12 @@ blockquote {
 			border: none;
 			border-bottom: 1px solid #333;
 		}
+		&__search {
+			&__input {
+				border: none;
+				border-bottom: 1px solid #333;
+			}
+		}
 	}
 	h1 {
 		font-size: 2.5rem;
@@ -415,7 +424,6 @@ blockquote {
 		&__caption {
 			position: relative;
 			max-width: 100%;
-
 		}
 	}
 	.product {
