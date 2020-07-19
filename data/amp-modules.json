@@ -52,6 +52,5 @@
   "amp-vine" : "https://cdn.ampproject.org/v0/amp-vine-0.1.js",
   "amp-viz-vega" : "https://cdn.ampproject.org/v0/amp-viz-vega-0.1.js",
   "amp-youtube" : "https://cdn.ampproject.org/v0/amp-youtube-0.1.js",
-  "amp-autocomplete" : "https://cdn.ampproject.org/v0/amp-autocomplete-0.1.js",
-  "amp-mustache" : "https://cdn.ampproject.org/v0/amp-mustache-0.2.js"
+  "amp-autocomplete" : "https://cdn.ampproject.org/v0/amp-autocomplete-0.1.js"
 }
