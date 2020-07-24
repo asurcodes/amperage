@@ -4,6 +4,11 @@
 		{{- partial "head/base.html" . -}}
 	</head>
 	<body>
+		{{ with .Site.Params.AdsensePublisher }}
+			{{ if eq $.Site.Params.AutoAdsEnabled true }}
+				<amp-auto-ads type="adsense" data-ad-client="{{ . }}"></amp-auto-ads>
+			{{ end }}
+		{{ end }}
 		{{- partial "page/install-sw.html" . -}}
 		{{- partial "page/analytics.html" . -}}
 		{{- partial "structured-data/base.html" . -}}
