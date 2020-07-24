@@ -1,0 +1,46 @@
+<figure class="figure {{ with .Title }}figure--with-caption{{ end }}">
+    {{ with .Title }}
+        <figcaption class="figure__caption">
+            {{ . }}
+        </figcaption>
+    {{ end }}
+    {{ $resource := resources.Get .Destination }}
+    {{ with $resource }}
+        {{ if in (slice "jpeg" "jpg" "png") $resource.MediaType.SubType }}
+            <amp-img
+                src="{{ .Permalink | safeURL | absURL }}"
+                srcset="{{ (.Resize "1200x").Permalink }} 1200w,
+                    {{ (.Resize "900x").Permalink }} 900w,
+                    {{ (.Resize "800x").Permalink }} 800w,
+                    {{ (.Resize "640x").Permalink }} 640w,
+                    {{ (.Resize "480x").Permalink }} 480w,
+                    {{ (.Resize "320x").Permalink }} 320w
+                "
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+                layout="responsive"
+                alt="{{ $.Text }}"
+                {{ with $.Title}} title="{{ . }}"{{ end }}
+                class="figure__image {{ with $.Title }}figure__image--with-caption{{ end }}"></amp-img>
+        {{ else if in (slice "gif") $resource.MediaType.SubType }}
+            <amp-anim
+                src="{{ .Permalink | safeURL | absURL }}"
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+                alt="{{ $.Text }}"
+                layout="responsive"
+                class="figure__image {{ with $.Title }}figure__image--with-caption{{ end }}"></amp-anim>
+        {{ else if in (slice "svg") $resource.MediaType.SubType }}
+            GoHugo resouces don't support svg images! ୧( ಠ Д ಠ )୨
+        {{ end }}
+    {{ else }}
+        <amp-img
+            src="{{ .Destination | safeURL | absURL }}"
+            height="1"
+            width="1"
+            layout="responsive"
+            alt="{{ .Text }}"
+            {{ with .Title}} title="{{ . }}"{{ end }}
+            class="figure__image {{ with .Title }}figure__image--with-caption{{ end }}"></amp-img>
+    {{ end }}
+</figure>
