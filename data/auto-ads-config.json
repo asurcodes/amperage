@@ -1,0 +1,15 @@
+{
+  "placements": [
+    {
+      "anchor": {
+        "selector": "ARTICLE.content",
+        "sub": {
+          "selector": "P",
+          "all": true
+        }
+      },
+      "pos": 4,
+      "type": 1
+    }
+  ]
+}
