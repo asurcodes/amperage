@@ -8,12 +8,7 @@
             "{{ $.Site.Params.googleAnalytics }}": { "groups": "default" }
           }
         },
-        "triggers": {
-          "trackPageview": {
-            "on": "visible",
-            "request": "pageview"
-          }
-        }
+        "triggers": {{ index $.Site.Data "analytics-triggers" }}
       }
     </script>
   </amp-analytics>
