@@ -1,0 +1,5 @@
+{{ with .Site.Params.AdsensePublisher }}
+    {{ if eq $.Site.Params.AutoAdsEnabled true }}
+        <amp-auto-ads type="adsense" data-ad-client="{{ . }}"></amp-auto-ads>
+    {{ end }}
+{{ end }}
