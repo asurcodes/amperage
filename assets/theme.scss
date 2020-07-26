@@ -378,7 +378,11 @@ blockquote {
 	}
 	.main,
 	.footer {
-		margin: 1em 0.75em 0 .5em;
+		margin: .5em .75em .5em .75em;
+	}
+	.footer {
+		flex-direction: column;
+		align-items: center;
 	}
 	.header {
 		margin: 0;
