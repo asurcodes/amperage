@@ -19,8 +19,10 @@ body {
 		margin: 0;
 		padding: 0;
 		display: flex;
-		overflow: auto;
+		flex-direction: row;
 		justify-content: flex-start;
+		align-items: center;
+		overflow: auto;
 		border: 1px solid #333;
 		a {
 			font-size: 1.2em;
@@ -48,6 +50,64 @@ body {
 			li {
 				padding: 0 1em;
 				display: inline;
+			}
+		}
+		&__dropdown-input,
+		&__dropdown-label,
+		&__dropdown-list {
+			display: none;
+		}
+		&__dropdown-input:checked {
+			& ~ .header__menu__dropdown-list {
+				display: flex;
+			}
+			& ~ .header__menu__dropdown-label .header__menu__dropdown-icon {
+				background: transparent;
+			}
+			& ~ .header__menu__dropdown-label .header__menu__dropdown-icon:before {
+				top: 0;
+				transform: rotate(-45deg);
+			}
+			& ~ .header__menu__dropdown-label .header__menu__dropdown-icon:after {
+				top: 0;
+				transform: rotate(45deg);
+			}
+		}
+		&__dropdown-label {
+			cursor: pointer;
+			padding: 1em;
+		}
+		&__dropdown-icon {
+			background: #333;
+			display: block;
+			height: 2px;
+			position: relative;
+			transition: background .2s ease-out;
+			width: 36px;
+			&:before,
+			&:after {
+				background: #333;
+				content: '';
+				display: block;
+				height: 100%;
+				position: absolute;
+				transition: all .2s ease-out;
+				width: 100%;
+			}
+			&:before {
+				top: 15px;
+			}
+			&:after {
+				top: -15px;
+			}
+		}
+		&__dropdown-list {
+			width: 100%;
+			flex-direction: column;
+			align-items: center;
+			border-top: 1px solid #333;
+			li {
+				padding: .5em;
 			}
 		}
 	}
@@ -389,6 +449,14 @@ blockquote {
 		&__menu {
 			border: none;
 			border-bottom: 1px solid #333;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			&__list {
+				display: none;
+			}
+			&__dropdown-label {
+				display: block;
+			}
 		}
 		&__search {
 			&__input {

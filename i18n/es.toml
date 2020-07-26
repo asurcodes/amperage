@@ -2,6 +2,8 @@
 other = "Inicio"
 [notFound]
 other = "Página no encontrada"
+[openDropdown]
+other = "Abrir menú desplegable"
 [search]
 other = "Buscar un artículo..."
 [goBackHome]
