@@ -1,7 +1,7 @@
 <figure class="figure {{ with .Title }}figure--with-caption{{ end }}">
     {{ with .Title }}
         <figcaption class="figure__caption">
-            {{ . }}
+            {{- . -}}
         </figcaption>
     {{ end }}
     {{ $resource := resources.Get .Destination }}
