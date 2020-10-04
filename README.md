@@ -2,27 +2,23 @@
 
 Amperage is a theme for static site generator [GoHugo](https://gohugo.io/). This theme provides the following features:
 
- - Generates AMP pages.
+ - Generates native AMP pages.
  - Valid PWA out of the box.
  - Automatic structured data.
  - Service worker for asset caching, link prefetching and offline navigation.
- - SEO optimized.
+ - Made with SEO in mind.
  - Multilanguage and i18n support.
  - Code highlighting on build time.
  - Super fast and lightweight.
  - Minimal and easily overridable styles.
- - Basic AMP shortcodes for ease of use.
+ - Basic AMP shortcodes and markdown render hooks for ease of use.
  - Header menu, table of contents and related posts.
  - Uses web safe fonts by default.
  - Automatic image croping and srcset generation.
  - Social share buttons and OGP/Twitter card tags.
- - Google analytics with gtag.
+ - Customizable Google Analytics with gtag.
  - Configurable Adsense shortcode.
- - Comment system agnostic.
-
-Lighthouse v5 theme results:
-
-![Lighthouse results](https://raw.githubusercontent.com/asurbernardo/amperage/master/images/lighthouse-results.png)
+ - Comment system agnostic ([Disqus example](https://github.com/asurbernardo/amperage-disqus-example)).
 
 ## ❯ Installation
 
@@ -43,7 +39,7 @@ hugo serve
 
 ## ❯ Kitchen sink
 
-You can check out all the components of this theme [here](https://asur.dev/en/amperage/theme-kitchen-sink) and a fully functional website using this theme [here](https://github.com/asurbernardo/blog).
+You can check out all the components of this theme [here](https://asur.dev/en/amperage/theme-kitchen-sink) and a fully functional website using Amperage [here](https://github.com/asurbernardo/blog) by yours truly.
 
 ## ❯ Configuration
 
@@ -56,7 +52,7 @@ theme = "amperage"
 pygmentsUseClasses = true
 
 # Number of posts shown per page
-paginate = 2
+paginate = 10
 
 # Language sections
 [languages]
@@ -122,6 +118,23 @@ paginate = 2
     publisherLogo = "/logo-amp-article.png"
     publisherLogoWidth = 600
     publisherLogoHeight = 60
+
+# Generate json to use as search index
+[outputs]
+    home = [ "HTML", "RSS", "SearchIndex"]
+
+[outputFormats]
+    [outputFormats.SearchIndex]
+        mediaType= "application/json"
+        baseName= "search"
+        isPlainText= true
+        notAlternative= true
+
+# Enable unsafe mode to be able to use HTML on markdown
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
 ```
 
 ## ❯ Customize logo
