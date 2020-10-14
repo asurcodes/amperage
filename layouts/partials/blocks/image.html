@@ -6,11 +6,11 @@
     {{ end }}
     {{ $resource := resources.Get .src }}
     {{ with $resource }}
-        {{ if and (eq .ResourceType "image") (ne .MediaType.SubType "svg") }}
+        {{ if in (slice "jpeg" "jpg" "png" "gif") $resource.MediaType.SubType }}
             <amp-img
                 src="{{ .Permalink | absURL }}"
-                srcset="
-                    {{ (.Resize "1200x").Permalink }} 1200w,
+                srcset="{{ (.Resize "1200x").Permalink }} 1200w,
+                    {{ (.Resize "900x").Permalink }} 900w,
                     {{ (.Resize "800x").Permalink }} 800w,
                     {{ (.Resize "640x").Permalink }} 640w,
                     {{ (.Resize "480x").Permalink }} 480w,

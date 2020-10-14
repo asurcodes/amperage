@@ -29,7 +29,7 @@ keywords = ['hugo', 'placeholder', 'example']
 
 # Placeholder Text
 
-{{% under-title %}}
+{{< under-title >}}
 
 Lorem est tota propiore conpellat pectoribus de
 pectora summo. Redit teque digerit hominumque toris verebor lumina non cervice

@@ -1,6 +1,23 @@
-
+{{ $baseUrl := trim .Site.BaseURL "/" }}
 <ul class="header__menu__list">
-    {{ $baseUrl := trim .Site.BaseURL "/" }}
+    {{ range .Site.Menus.main }}
+        {{ $url := trim .URL "/" | absURL }}
+        <li>
+            <a href="{{ $url }}"
+                {{ if or (.Page) (hasPrefix $url $baseUrl) }} data-rel="prefetch"
+                {{else}} target="_blank" rel="nofollow noopener noreferrer" {{ end }}>
+                {{ .Pre }}<span>{{ .Name }}</span>
+            </a>
+        </li>
+    {{ end }}
+</ul>
+
+<input class="header__menu__dropdown-input" type="checkbox" id="dropdown"/>
+<label class="header__menu__dropdown-label" for="dropdown" role="button" aria-label="{{ i18n "openDropdown"}}">
+    <span class="header__menu__dropdown-icon"></span>
+</label>
+
+<ul class="header__menu__dropdown-list">
     {{ range .Site.Menus.main }}
         {{ $url := trim .URL "/" | absURL }}
         <li>

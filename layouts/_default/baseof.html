@@ -4,6 +4,7 @@
 		{{- partial "head/base.html" . -}}
 	</head>
 	<body>
+		{{- partial "page/auto-ads.html" . -}}
 		{{- partial "page/install-sw.html" . -}}
 		{{- partial "page/analytics.html" . -}}
 		{{- partial "structured-data/base.html" . -}}
@@ -16,5 +17,8 @@
 		<footer class="footer">
 			{{- partial "footer/base.html" . -}}
 		</footer>
+		{{ if .IsPage }}
+			{{- partial "page/infinite-scroll.html" . -}}
+		{{ end }}
 	</body>
 </html>

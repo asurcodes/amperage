@@ -28,7 +28,7 @@ keywords = ['hugo', 'emoji', 'example']
 
 # Emoji support
 
-{{% under-title %}}
+{{< under-title >}}
 
 Emoji can be enabled in a Hugo project in a number of ways.
 

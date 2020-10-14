@@ -1,0 +1,9 @@
+{{ $baseUrl := trim .Page.Site.BaseURL "/" }}
+{{ $url := trim .Destination "/" | absURL }}
+
+<a href="{{ $url }}"
+    {{ if hasPrefix $url $baseUrl }} data-rel="prefetch"
+    {{else}} target="_blank" rel="nofollow noopener noreferrer" {{ end }}
+    {{ with .Title}} title="{{ . }}"{{ end }}>
+    {{- .Text | safeHTML -}}
+</a>
