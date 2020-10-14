@@ -17,5 +17,8 @@
 		<footer class="footer">
 			{{- partial "footer/base.html" . -}}
 		</footer>
+		{{ if .IsPage }}
+			{{- partial "page/infinite-scroll.html" . -}}
+		{{ end }}
 	</body>
 </html>

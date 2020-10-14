@@ -1,0 +1,18 @@
+{{ $related := .Site.RegularPages.Related . | first 3 }}
+
+{{ with $related }}
+<amp-next-page>
+    <script type="application/json">
+        [
+            {{- range $index, $post := . -}}
+                {{- if ne $index 0 -}},{{- end -}}
+                {
+                    "image": "",
+                    "title": "{{ .Title }}",
+                    "url": "{{ .Permalink }}"
+                }
+            {{- end -}}
+        ]
+    </script>
+</amp-next-page>
+{{ end }}
