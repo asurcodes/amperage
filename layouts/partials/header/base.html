@@ -1,4 +1,4 @@
-<nav class="header__menu" next-page-hide>
+<nav class="header__menu" {{ if .IsPage }}next-page-hide{{ end }}>
     <a class="header__menu__logo" data-rel="prefetch" href="{{ "" | absLangURL }}" aria-label="{{ i18n "goBackHome" }}">
         {{- partial "header/logo.html" . -}}
     </a>
