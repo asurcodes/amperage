@@ -1,0 +1,6 @@
+{
+    "trackPageview": {
+        "on": "visible",
+        "request": "pageview"
+    }
+}

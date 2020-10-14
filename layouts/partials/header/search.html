@@ -1,0 +1,18 @@
+<amp-autocomplete
+    on="select:AMP.navigateTo(url=event.value)"
+    filter="substring"
+    filter-value="title"
+    src="{{ `search.json` | absLangURL }}"
+    min-characters="1"
+    class="header__search"
+    next-page-hide>
+    <input class="header__search__input" type="text" placeholder="{{ i18n "search"}}" aria-label="{{ i18n "search"}}">
+    <template class="header__search__item-template" type="amp-mustache" id="amp-template-custom">
+        <div class="search-item" data-value="{{ `{{url}}` }}">
+            <small class="search-item__date">{{ `{{date}}` }}</small> <br>
+            <a class="search-item__link" {{ printf "href=%q" `{{url}}` | safeHTMLAttr }}>
+                {{ `{{title}}` }}
+            </a>
+        </div>
+    </template>
+</amp-autocomplete>

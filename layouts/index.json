@@ -1,0 +1,12 @@
+{ "items": [
+    {{- range $index, $page :=.Site.RegularPages -}}
+        {{- $months := index .Site.Data (i18n "months") -}}
+        {{- $month := index $months (printf "%d" .PublishDate.Month) -}}
+        {{- if ne $index 0 -}},{{- end -}}
+        {
+            "title": "{{ .Title }}",
+            "url": "{{ .Permalink }}",
+            "date": "{{ i18n "published" (dict "Day" .PublishDate.Day "Month" $month "Year" .PublishDate.Year) }}"
+        }
+    {{- end -}}
+]}

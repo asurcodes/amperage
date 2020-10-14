@@ -17,3 +17,13 @@
         {{ end }}
     {{ end }}
 {{ end }}
+<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+
+{{ with .Site.Params.AdsensePublisher }}
+    {{ if eq $.Site.Params.AutoAdsEnabled true }}
+        <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+    {{ end }}
+{{ end }}
+{{ if .IsPage }}
+    <script async custom-element="amp-next-page" src="https://cdn.ampproject.org/v0/amp-next-page-1.0.js"></script>
+{{ end }}

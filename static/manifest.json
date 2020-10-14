@@ -6,5 +6,17 @@
   "background_color": "#fff",
   "theme_color": "#333",
   "description": "An example site for the Amperage theme.",
-  "icons":[{"src":"/icons/android-chrome-192x192.png","sizes":"192x192","type":"image/png"}]
+  "icons":[
+    {
+      "src":"/icons/android-chrome-192x192.png",
+      "sizes":"192x192",
+      "type":"image/png"
+    },
+    {
+      "src": "/icons/maskable-icon.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }

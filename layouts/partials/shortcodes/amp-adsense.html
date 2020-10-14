@@ -9,24 +9,7 @@
                 {{ with .height }} height="{{ . }}"{{ end }}
                 {{ with .layout }} layout="{{ . }}"{{ end }}
                 {{ with .slot }} data-ad-slot="{{ . }}" {{ end }}
-                data-ad-client="{{ $.Site.Params.adsensePublisher }}">
-                <div class="ad__fallback" fallback><p>{{ i18n "noAd" }}</p></div>
-            </amp-ad>
-        </fieldset>
-    {{ end }}
-{{ else }}
-    {{ if isset . "context" }}
-        {{ $publisher := .context.Site.Params.adsensePublisher }}
-        <fieldset class="ad">
-            <legend><strong>#ad</strong></legend>
-            <amp-ad type="adsense"
-                {{ with .class }} class="{{ . }}"{{ end }}
-                {{ with .alt }} alt="{{ . }}"{{ end }}
-                {{ with .width }} width="{{ . }}"{{ end }}
-                {{ with .height }} height="{{ . }}"{{ end }}
-                {{ with .layout }} layout="{{ . }}"{{ end }}
-                {{ with .slot }} data-ad-slot="{{ . }}" {{ end }}
-                data-ad-client="{{ $publisher }}">
+                data-ad-client="{{ $.Site.Params.AdsensePublisher }}">
                 <div class="ad__fallback" fallback><p>{{ i18n "noAd" }}</p></div>
             </amp-ad>
         </fieldset>

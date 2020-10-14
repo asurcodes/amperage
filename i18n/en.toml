@@ -2,8 +2,10 @@
 other = "Home"
 [notFound]
 other = "Page not found"
+[openDropdown]
+other = "Open dropdown menu"
 [search]
-other = "Search"
+other = "Search for a post..."
 [goBackHome]
 other = "Go back to the homepage"
 [by]

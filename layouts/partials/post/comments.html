@@ -1,4 +1,4 @@
-{{ if isset .Site.Params "commentsembedurl" }}
+{{ if and (isset $.Site.Params "commentsembedurl") (ne $.Page.Params.commentsDisabled true) }}
     <amp-iframe width=600 height=180
         layout="responsive"
         sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
