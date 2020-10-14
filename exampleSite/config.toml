@@ -80,5 +80,17 @@ paginate = 3
     publisherLogoWidth = 600
     publisherLogoHeight = 60
 
+[outputs]
+    home = [ "HTML", "RSS", "SearchIndex"]
+
+[outputFormats]
+    [outputFormats.SearchIndex]
+        mediaType= "application/json"
+        baseName= "search"
+        isPlainText= true
+        notAlternative= true
+
 [markup]
-    defaultMarkdownHandler = "blackfriday"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
