@@ -149,7 +149,7 @@ To override default styles just add the file `assets/custom.scss` to your projec
 
 To enable cross-domain service worker you need to override the file `static/install-sw.html`:
 
-```
+```html
 <amp-install-serviceworker
   src="https://your-site.com/sw.js"
   data-iframe-src="https://your-site.com/install-sw.html"
@@ -161,7 +161,7 @@ To enable cross-domain service worker you need to override the file `static/inst
 
 On the menu you can set internal and external links. To set external links you can use the `config.toml` file:
 
-```
+```toml
 [[menu.main]]
     identifier = "hugo"
     name = "Hugo"
@@ -175,7 +175,7 @@ On the menu you can set internal and external links. To set external links you c
 ```
 
 If you want to display a page from your own site on the menu you need to add to the frontmatter of that page:
-```
+```toml
 [languages.es]
     [menu.main]
         name = "Your title for the menu"
@@ -188,7 +188,7 @@ This distinction is important because the service worker needs to identify the i
 
 To enable ads you need to have an approved Adsense publisher code. Once you get one set it in the `config.toml`:
 
-```
+```toml
 adsensePublisher = "ca-pub-123456789"
 ```
 
@@ -208,7 +208,7 @@ Due to AMP requirements the comments need to be hosted in a domain different fro
 
 Remember that to resize the iframe containing the comment box you need to send a message to the amp sentinel with the new height:
 
-```
+```javascript
 window.requestAnimationFrame(() => {
     window.parent.postMessage({
     sentinel: 'amp',
@@ -220,7 +220,7 @@ window.requestAnimationFrame(() => {
 
 If you want to integrate your own comment service Amperage will add the parameters `id` and `url` to the request so you can use them on the iframe, in case you need a unique id. An example for Disqus:
 
-```
+```javascript
 var urlParams = new URLSearchParams(window.location.search);
 
 var disqus_config = function () {
